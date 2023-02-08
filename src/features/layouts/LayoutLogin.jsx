@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const LayoutBackgroundDegrade= ({children}) => {
+const LayoutLogin= ({children}) => {
   return (
     
    
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
       },
 }); 
 
-export default LayoutBackgroundDegrade;
+export default LayoutLogin;
