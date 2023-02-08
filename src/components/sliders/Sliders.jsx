@@ -1,7 +1,7 @@
 import { TextInput, View } from "react-native";
 
 
-const Input = () => {
+const Sliders = () => {
   return (
     <View>
         <TextInput/>
@@ -9,4 +9,4 @@ const Input = () => {
   )
 }
 
-export default Input;
+export default Sliders;
