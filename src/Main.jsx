@@ -1,5 +1,5 @@
 import React from "react";
-import LayoutBackgroundDegrade from "./features/layouts/LayoutBackgroundDegrade";
+import LayoutLogin from "./features/layouts/LayoutBackgroundDegrade";
 
 
 
@@ -8,7 +8,7 @@ const Main = () => {
     
     return(
         
-    <LayoutBackgroundDegrade/>
+    <LayoutLogin/>
 
     )
 }
