@@ -14,11 +14,11 @@ const Navigation = () => {
         <Stack.Screen
           name="Login"
           component={LayoutLogin}
-          options={{ headerShown: false }}
+          options={{ headerShown: false, title: 'MTQ' }}
         /> 
         {/* <Stack.Screen name="Register" component={Register} /> */}
         <Stack.Screen name="LayoutWellcome" component={LayoutWellcome} />
-        {/* <Stack.Screen name="Menu" component={Menu} />  */}
+        <Stack.Screen name="LayoutLogin" component={LayoutLogin} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );
