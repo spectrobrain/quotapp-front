@@ -70,12 +70,12 @@ const LayoutLogin = ({ navigation }) => {
               <Text style={styles.textbutton}>Login</Text>
             </Pressable>
 
-            <View style={{ flexDirection: "row", marginTop: 10 }}>
+            {/* <View style={{ flexDirection: "row", marginTop: 10 }}>
               <Text>Don't have an account? </Text>
               {/* <TouchableOpacity onPress={() => navigation.navigate("Home")}> */}
-              <Text>Home</Text>
+              {/* <Text>Home</Text> */}
               {/* </TouchableOpacity> */}
-            </View>
+            {/* </View>  */}
           </View>
         </View>
         {/* </Home> */}
