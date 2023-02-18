@@ -4,13 +4,14 @@ import LayoutBannerLogin from './LayoutBannerLogin';
 import { user } from '../../services/Data.json';
 import { useFonts } from 'expo-font';
 import LayoutWellcome from '../wellcome/LayoutWellcome';
+import LayoutBannerWellcome from '../wellcome/LayoutBannerWellcome';
 
 const LayoutLogin= ({navigation}) => {
 
   const { email, password } = user;
 
     const [emailUser, setEmailUser] = useState("");
-    const [passwordUser, setPasswordUser] = useState();
+    const [passwordUser, setPasswordUser] = useState(null);
     console.log(emailUser, passwordUser);
 
     const handledButtonLogin  = () =>  {

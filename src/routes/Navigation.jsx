@@ -18,8 +18,12 @@ const Navigation = () => {
         /> 
         {/* <Stack.Screen name="Register" component={Register} /> */}
         <Stack.Screen name="LayoutWellcome" component={LayoutWellcome} />
+        <Stack.Screen name="LayoutLogin" component={LayoutLogin} />
+        
         {/* <Stack.Screen name="Menu" component={Menu} />  */}
       </Stack.Navigator>
+
+     
     </NavigationContainer>
   );
 };

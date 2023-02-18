@@ -1,21 +1,26 @@
 import React from "react";
-import { View, Image, StyleSheet, Text, ImageBackground } from "react-native";
+import { View, Image, StyleSheet, Text, ImageBackground, SafeAreaView } from "react-native";
 
 const LayoutBannerLogin = () => {
   return (
-    <View>
+    <SafeAreaView style = {{ flex: 1,}} >
+      <View>
 
-    <ImageBackground style={{width: '100%', height: 280}}
-        source={require("../../../assets/images/login_bg.png")}>
-            <View style={styles.textView}>
-                <Image
-                    source={require("../../../assets/images/logo.png")}
-                    style={{width: '40%', height: 50}}
-                ></Image>
-                <Text style={styles.imageText}>Welcome to your sales assistant</Text>
-            </View>
-    </ImageBackground>
-    </View>
+        <ImageBackground style={{width: '100%', height: 280}}
+            source={require("../../../assets/images/login_bg.png")}>
+
+                <View style={styles.textView}>
+                    <Image
+                        source={require("../../../assets/images/logo.png")}
+                        style={{width: '40%', height: 50}}
+                    ></Image>
+                    <Text style={styles.imageText}>Welcome to your sales assistant</Text>
+                </View>
+
+        </ImageBackground>
+        
+      </View>
+    </SafeAreaView>
   );
 };
 
