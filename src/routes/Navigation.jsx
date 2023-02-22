@@ -24,6 +24,15 @@ const Navigation = () => {
         {/* <Stack.Screen name="Register" component={Register} /> */}
         <Stack.Screen name="LayoutWellcome" component={LayoutWellcome} />
         <Stack.Screen name="LayoutLogin" component={LayoutLogin} /> 
+        <Stack.Screen name="LayoutWellcome" component={LayoutWellcome} options={{ headerShown: false }}/>
+        <Stack.Screen name="LayoutYearChart" component={LayoutYearChart} options={{ headerShown: false }}/>
+        <Stack.Screen name="GraphMonths" component={LayoutChartLastMonths} options={{ headerShown: false }}/>
+        <Stack.Screen name="IATips" component={LayoutTipsRobot}/>
+        <Stack.Screen name="GraphYear" component={GraphYear}/>
+        {/* <Stack.Screen name="Menu" component={Menu} />  */}
+   
+        
+   
       </Stack.Navigator>
     </NavigationContainer>
   );

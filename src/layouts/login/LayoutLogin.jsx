@@ -11,6 +11,7 @@ const LayoutLogin= ({navigation}) => {
   //const { email, password } = user;
 
 
+
   const [emailUser, setEmailUser] = useState("");
   const [passwordUser, setPasswordUser] = useState();
   console.log(emailUser, passwordUser);
