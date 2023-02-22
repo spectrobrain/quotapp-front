@@ -29,5 +29,16 @@
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
-  "private": true
+  "private": true,
+  "description": "_Acá va un párrafo que describa lo que es el proyecto_",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spectrobrain/quotapp-front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spectrobrain/quotapp-front/issues"
+  },
+  "homepage": "https://github.com/spectrobrain/quotapp-front#readme"
 }
