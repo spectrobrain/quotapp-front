@@ -65,14 +65,15 @@ const LayoutLogin = ({ navigation }) => {
               secureTextEntry
               onChangeText={(text) => setPasswordUser(text)}
             />
-
+          
+           <TouchableOpacity style={{color: 'blue',}}>
             <Pressable
               style={styles.button}
               onPress={() => handledButtonLogin()}
             >
               <Text style={styles.textbutton}>Login</Text>
             </Pressable>
-
+            </TouchableOpacity>
             {/* <View style={{ flexDirection: "row", marginTop: 10 }}>
               <Text>Don't have an account? </Text>
               {/* <TouchableOpacity onPress={() => navigation.navigate("Home")}> */}
@@ -119,6 +120,10 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     textShadowColor: "#fff",
     color: "#fff",
+    //estoy modificando los estilos en el imput carlos//
+    marginLeft: 40,
+    marginRight: 40,
+   
   },
   link: {
     color: "blue",
@@ -132,6 +137,9 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     elevation: 3,
     marginTop: 10,
+    //esto lo modifique por la apariencia //
+    marginLeft: 40,
+    marginRight: 40,
   },
   textbutton: {
     color: "#fff",
