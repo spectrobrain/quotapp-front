@@ -6,15 +6,16 @@ import { StyleSheet, Text, View, ImageBackground, Pressable, Image } from 'react
 import * as Amigatable from 'react-native-animatable';
 import { Entypo } from '@expo/vector-icons'; 
 import { Feather } from '@expo/vector-icons'; 
+import { AntDesign } from '@expo/vector-icons';
 
 
 const LayoutWellcome= ({navigation}) => {
 
 
-   return (
+    return (
    
-    <ImageBackground style={styles.container}
-         source={require("../../../assets/images/app_bg.jpg")}>
+      <ImageBackground style={styles.container}
+              source={require("../../../assets/images/app_bg.jpg")}>
             <ImageBackground
               source={require("../../../assets/images/header_bg.png")}
               style={styles.container1} >
@@ -24,29 +25,33 @@ const LayoutWellcome= ({navigation}) => {
                       style={styles.logo} >
                   </Image>
                   <Pressable style={styles.ButtonIcon}  onPress={() =>   navigation.navigate("LayoutLogin")}>
-                  {/* <AntDesign name="close" size={34} color="black" /> */}
                   <Feather name="x" size={34} color="black" />
                   </Pressable>
-                </View>
-            </ImageBackground>
-              <View style={styles.container2}>
-              <Text>esto es un prueva</Text>
               </View>
+            </ImageBackground>
+             {/* imagen donde va el texto que cambia */}
+              <View style={styles.container2}>
+                <Text style={styles.TextX}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</Text>
+                </View>
+                <View style={styles.ButtonIcon3}>
+                <AntDesign name="caretdown" size={74} color="white" />
+              </View>
+               {/* animacion del robot  */}
               <View >
-              <Amigatable.Image animation="slideInDown" iterationCount={10} 
-              direction="alternate-reverse"
-              source={require("../../../assets/images/MASCOT.gif")} 
-              style={{width: '100%', height: '50%', resizeMode: 'contain', paddingVertical: 15 }} /> 
-               <View style={styles.ButtonIcon2}>
-               
-               <Entypo name="chevron-right" size={50} color="white" />
-               </View>
+                <Amigatable.Image animation="zoomIn" iterationCount={1} 
+                direction="normal" duration={20000}
+                source={require("../../../assets/images/MASCOT.gif")} 
+                style={{width: '100%', height: '45%', resizeMode: 'contain', marginVertical: 40 }} /> 
+
+                {/*icono cambio de texto*/}
+                <View style={styles.ButtonIcon2}>
+                <Entypo name="chevron-right" size={60} color="white" />
+                </View>
 
               </View>     
-    </ImageBackground>
-   
-   );
-}
+      </ImageBackground>
+    );
+};
 
 const styles = StyleSheet.create({
    container: {
@@ -59,10 +64,10 @@ const styles = StyleSheet.create({
    },
 
    container2:{
-     marginVertical: 50,
+     marginVertical: 0,
      marginTop: 1,
      marginLeft: 100,
-     borderRadius: 10,
+     borderRadius: 5,
      backgroundColor: '#fff',
      width: 200,
      height: 150,
@@ -70,10 +75,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
    
    },
-   container3: {  
+   container3: { 
+     marginHorizontal: 0, 
      marginLeft: 180,
-     borderRadius: 30,
-     backgroundColor: '#0008',
+     borderRadius: 0,
+     backgroundColor: '#fff',
+    
      width: 40,
      height: 50,
    },
@@ -92,12 +99,9 @@ const styles = StyleSheet.create({
    },
 
    TextX: {
-     width: 800,
-     height: 500,
-     position: 'absolute',
-     top: 25,
-     left: 370,
-     right: 0,
+     marginTop: 5,
+     marginHorizontal: 10,
+     marginVertical: 10,
    },
    ButtonIcon: {
      width: 800,
@@ -109,12 +113,16 @@ const styles = StyleSheet.create({
 
    },
    ButtonIcon2: {
-    width: 800,
-    height: 500,
     position: 'absolute',
-    top: 20,
-    left: 330,
+    top: 120,
+    left: 290,
     right: 0, 
+
+  },
+  ButtonIcon3: {
+    marginVertical: -30,
+    marginLeft: 168,
+   
 
   },
 
