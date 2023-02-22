@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, Pressable, Image } from 'react-native';
 
@@ -128,4 +127,3 @@ const styles = StyleSheet.create({
 
 
 export default LayoutWellcome;
-

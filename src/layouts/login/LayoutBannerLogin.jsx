@@ -1,5 +1,4 @@
 import React from "react";
-
 import { View, Image, StyleSheet, Text, ImageBackground, Dimensions } from "react-native";
 import { ScaledSheet } from "react-native-size-matters";
 const { width, height } = Dimensions.get('window');
@@ -19,7 +18,6 @@ const LayoutBannerLogin = () => {
             </View>
     </ImageBackground>
     </View>
-
   );
 };
 
