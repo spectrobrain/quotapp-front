@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 import {
@@ -5,29 +6,31 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity,
   ImageBackground,
   Pressable,
 } from "react-native";
 
 import LayoutBannerLogin from "./LayoutBannerLogin";
 import { ScaledSheet } from "react-native-size-matters";
-//import { user } from '../../services/Data.json';
+
 import { useFonts } from "expo-font";
-import LayoutWellcome from "../wellcome/LayoutWellcome";
+
 
 const LayoutLogin = ({ navigation }) => {
-  //const { email, password } = user;
+  
+
 
   const [emailUser, setEmailUser] = useState("");
   const [passwordUser, setPasswordUser] = useState();
   console.log(emailUser, passwordUser);
 
-  const handledButtonLogin = () => {
-    //   if(emailUser == email && passwordUser == password){
-    navigation.navigate("LayoutWellcome");
-    // }
-  };
+    const handledButtonLogin  = () =>  {
+   
+        navigation.navigate("LayoutWellcome")  
+  
+    }
+
+ 
 
   const [fontsLoaded] = useFonts({
     Roboto: require("../../../assets/fonts/Roboto-Light.ttf"),
@@ -81,7 +84,8 @@ const LayoutLogin = ({ navigation }) => {
       </ImageBackground>
     </View>
   );
-};
+
+  } 
 
 const styles = StyleSheet.create({
   container: {
@@ -134,5 +138,6 @@ const scaledStyles = ScaledSheet.create({
     height: height,
   },
 });
+
 
 export default LayoutLogin;
