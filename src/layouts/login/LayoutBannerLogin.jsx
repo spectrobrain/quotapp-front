@@ -73,6 +73,6 @@ const styles = StyleSheet.create({
         color: '#1592b9',
         fontWeight: 'bold',
         textAlign: 'center',
-        resizeMode: 'contain',
+        
       },
 })

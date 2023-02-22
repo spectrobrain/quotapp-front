@@ -1,18 +1,22 @@
 import ContextItem from "./ContextItem";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { getDataService } from "../../services/serviceFetch";
 
-const ItemState = ({ children }) => {
-  const [jobs, setJobs] = useState();
-  
+export const ItemState = ({ children }) => {
+  const [dataUser, setDataUser] = useState();
   const getData = async () => {
     const newData = await getDataService();
-    setJobs(newData);
+    setDataUser(newData);
   };
-
+  useEffect(() => {
+    
+  getData()
+  
+  }, [])
+  
   return (
     <ContextItem.Provider
-      value={{  getData,  }}
+      value={{ dataUser }}
     >
       {children}
     </ContextItem.Provider>

@@ -1,32 +1,24 @@
-import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity,
-  ImageBackground,
-  Pressable,
-  Dimensions,
-} from "react-native";
-import LayoutBannerLogin from "./LayoutBannerLogin";
-import { user } from "../../services/Data.json";
-import { useFonts } from "expo-font";
+import React, { useState} from 'react';
+import { StyleSheet, Text, View, TextInput, ImageBackground, Pressable  } from 'react-native';
+import LayoutBannerLogin from './LayoutBannerLogin';
 import { ScaledSheet } from "react-native-size-matters";
-const { width, height } = Dimensions.get('window');
+//import { user } from '../../services/Data.json';
+import { useFonts } from 'expo-font';
+import LayoutWellcome from '../wellcome/LayoutWellcome';
 
-const LayoutLogin = ({ navigation }) => {
-  let ScreenHeight = Dimensions.get("window").height;
+const LayoutLogin= ({navigation}) => {
 
-  const { email, password } = user;
+  //const { email, password } = user;
+
 
   const [emailUser, setEmailUser] = useState("");
   const [passwordUser, setPasswordUser] = useState();
   console.log(emailUser, passwordUser);
 
-  const handledButtonLogin = () => {
-    if (emailUser == email && passwordUser == password) {
-      navigation.navigate("LayoutWellcome");
+    const handledButtonLogin  = () =>  {
+    //   if(emailUser == email && passwordUser == password){
+        navigation.navigate("LayoutWellcome")  
+    // }
     }
   };
 
@@ -82,7 +74,7 @@ const LayoutLogin = ({ navigation }) => {
       </ImageBackground>
     </View>
   );
-};
+
 
 const scaledStyles = ScaledSheet.create({
   container: {
@@ -97,45 +89,6 @@ const scaledStyles = ScaledSheet.create({
   },
 });
 
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    alignItems: "center",
-  },
-  wrapper: {
-    width: width,
-    height: height / 6,
-  },
-  input: {
-    // marginTop: 1,
-    marginBottom: 15,
-    borderWidth: 3,
-    borderColor: "#bbb",
-    borderRadius: 30,
-    paddingHorizontal: 12,
-    paddingVertical: 15,
-    textShadowColor: "#fff",
-    color: "#fff",
-  },
-  link: {
-    color: "blue",
-  },
-  button: {
-    backgroundColor: "#3ed9f4",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 40,
-    elevation: 3,
-    marginTop: 10,
-  },
-  textbutton: {
-    color: "#fff",
-    fontSize: 25,
-    letterSpacing: 5,
-    fontWeight: "bold",
-  },
-});
+
 
 export default LayoutLogin;
