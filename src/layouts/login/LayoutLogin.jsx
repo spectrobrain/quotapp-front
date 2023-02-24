@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -15,14 +16,16 @@ import { useFonts } from "expo-font";
 import { ScaledSheet } from "react-native-size-matters";
 const { width, height } = Dimensions.get('window');
 
+
 const LayoutLogin = ({ navigation }) => {
   let ScreenHeight = Dimensions.get("window").height;
 
   const { email, password } = user;
-
+console.log(email,user)
   const [emailUser, setEmailUser] = useState("");
   const [passwordUser, setPasswordUser] = useState();
   console.log(emailUser, passwordUser);
+
 
   const handledButtonLogin = () => {
     if (emailUser == email && passwordUser == password) {
@@ -62,14 +65,15 @@ const LayoutLogin = ({ navigation }) => {
               secureTextEntry
               onChangeText={(text) => setPasswordUser(text)}
             />
-
+          
+           <TouchableOpacity style={{color: 'blue',}}>
             <Pressable
               style={styles.button}
               onPress={() => handledButtonLogin()}
             >
               <Text style={styles.textbutton}>Login</Text>
             </Pressable>
-
+            </TouchableOpacity>
             {/* <View style={{ flexDirection: "row", marginTop: 10 }}>
               <Text>Don't have an account? </Text>
               {/* <TouchableOpacity onPress={() => navigation.navigate("Home")}> */}
@@ -116,6 +120,10 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     textShadowColor: "#fff",
     color: "#fff",
+    //estoy modificando los estilos en el imput carlos//
+    marginLeft: 40,
+    marginRight: 40,
+   
   },
   link: {
     color: "blue",
@@ -129,6 +137,9 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     elevation: 3,
     marginTop: 10,
+    //esto lo modifique por la apariencia //
+    marginLeft: 40,
+    marginRight: 40,
   },
   textbutton: {
     color: "#fff",
