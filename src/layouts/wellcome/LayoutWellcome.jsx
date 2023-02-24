@@ -18,22 +18,22 @@ const LayoutWellcome= ({navigation}) => {
               source={require("../../../assets/images/app_bg.jpg")}>
             <ImageBackground
               source={require("../../../assets/images/header_bg.png")}
-              style={styles.container1} >
+              style={styles.containerHeader} >
               <View>
                   <Image
                       source={require("../../../assets/images/logo.png")}
-                      style={styles.logo} >
+                      style={styles.logoMtq} >
                   </Image>
-                  <Pressable style={styles.ButtonIcon}  onPress={() =>   navigation.navigate("LayoutLogin")}>
+                  <Pressable style={styles.iconXblack}  onPress={() =>   navigation.navigate("LayoutLogin")}>
                   <Feather name="x" size={34} color="black" />
                   </Pressable>
               </View>
             </ImageBackground>
              {/* imagen donde va el texto que cambia */}
-              <View style={styles.container2}>
-                <Text style={styles.TextX}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</Text>
+              <View style={styles.containerMessage}>
+                <Text style={styles.textMessage}>Lorem Ipsum is simply dummy text of the printing and typesetting industry and typesetting industry.</Text>
                 </View>
-                <View style={styles.ButtonIcon3}>
+                <View style={styles.iconMesaggeCaret}>
                 <AntDesign name="caretdown" size={74} color="white" />
               </View>
                {/* animacion del robot  */}
@@ -44,7 +44,7 @@ const LayoutWellcome= ({navigation}) => {
                 style={{width: '100%', height: '45%', resizeMode: 'contain', marginVertical: 40 }} /> 
 
                 {/*icono cambio de texto*/}
-                <View style={styles.ButtonIcon2}>
+                <View style={styles.iconChevron}>
                 <Entypo name="chevron-right" size={60} color="white" />
                 </View>
 
@@ -58,19 +58,19 @@ const styles = StyleSheet.create({
      flex: 1,
    }, 
 
-   container1: {  
+   containerHeader: {  
    width: '100%',
    height: 150,
    },
 
-   container2:{
+   containerMessage:{
      marginVertical: 0,
      marginTop: 1,
      marginLeft: 100,
      borderRadius: 5,
      backgroundColor: '#fff',
      width: 200,
-     height: 150,
+     height: 'auto',
      alignItems: 'center',
     justifyContent: 'center',
    
@@ -91,19 +91,19 @@ const styles = StyleSheet.create({
      borderColor: '#272727',
      bottom: 0,
    },
-   logo: {
+   logoMtq: {
      marginLeft: 25,
      marginTop: 20,
      width: 80,
      height: 30,
    },
 
-   TextX: {
+   textMessage: {
      marginTop: 5,
      marginHorizontal: 10,
      marginVertical: 10,
    },
-   ButtonIcon: {
+   iconXblack: {
      width: 800,
      height: 500,
      position: 'absolute',
@@ -112,14 +112,14 @@ const styles = StyleSheet.create({
      right: 0, 
 
    },
-   ButtonIcon2: {
+   iconChevron: {
     position: 'absolute',
     top: 120,
     left: 290,
     right: 0, 
 
   },
-  ButtonIcon3: {
+  iconMesaggeCaret: {
     marginVertical: -30,
     marginLeft: 168,
    
