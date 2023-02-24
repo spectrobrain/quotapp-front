@@ -17,7 +17,7 @@ const Navigation = () => {
           options={{ headerShown: false, title: 'MTQ' }}
         /> 
         {/* <Stack.Screen name="Register" component={Register} /> */}
-        <Stack.Screen name="LayoutWellcome" component={LayoutWellcome} />
+        <Stack.Screen name="LayoutWellcome" component={LayoutWellcome} options={{ headerShown: false }} />
 
         <Stack.Screen name="LayoutLogin" component={LayoutLogin} /> 
 

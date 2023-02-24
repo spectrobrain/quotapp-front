@@ -19,6 +19,8 @@ const { width, height } = Dimensions.get('window');
 
 const LayoutLogin = ({ navigation }) => {
   let ScreenHeight = Dimensions.get("window").height;
+  let ScreenWidth = Dimensions.get("window").width;
+  console.log(ScreenHeight,ScreenWidth);
 
   const { email, password } = user;
 console.log(email,user)
@@ -90,7 +92,7 @@ console.log(email,user)
 
 const scaledStyles = ScaledSheet.create({
   container: {
-    flex: 4,
+    flex: 1,
     width: width,
     height: height,
   },
