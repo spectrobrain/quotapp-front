@@ -13,13 +13,14 @@ import * as Amigatable from "react-native-animatable";
 import { Entypo } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+const { width, height } = Dimensions.get('window');
 
 const LayoutWellcome = ({ navigation }) => {
 
-  const { width, height } = Dimensions.get('window');
-  console.log(width,height);
-  let ScreenHeight = Dimensions.get("window").height;
-  let ScreenWidth = Dimensions.get("window").width;
+ 
+  let Height = Dimensions.get("window").height;
+  let Width = Dimensions.get("window").width;
+  console.log(Height,Width)
   return (
     <ImageBackground
       style={styles.container}
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    width: '100%',
+    width: width,
     height: '100%',
   },
 
