@@ -19,7 +19,7 @@ const Navigation = () => {
         {/* <Stack.Screen name="Register" component={Register} /> */}
         <Stack.Screen name="LayoutWellcome" component={LayoutWellcome} options={{ headerShown: false }} />
 
-        <Stack.Screen name="LayoutLogin" component={LayoutLogin} /> 
+        <Stack.Screen name="LayoutLogin" component={LayoutLogin} options={{ headerShown: false }} /> 
 
       </Stack.Navigator>
 
