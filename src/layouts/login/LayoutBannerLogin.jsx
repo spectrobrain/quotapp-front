@@ -3,22 +3,34 @@ import React from "react";
 import { View, Image, StyleSheet, Text, ImageBackground, Dimensions } from "react-native";
 import { ScaledSheet } from "react-native-size-matters";
 const { width, height } = Dimensions.get('window');
+import { useFonts } from "expo-font";
 
 const LayoutBannerLogin = () => {
 
+  // const [fontsLoaded] = useFonts({
+  //   Roboto: require("../../../assets/fonts/Roboto-Bold.tff"),
+  // });
+
+  // if (!fontsLoaded) {
+  //   return null;
+  // }
+
   return (
-    <View style={scaledStyles.container}>
-    <ImageBackground style={scaledStyles.ImBackgound}
-        source={require("../../../assets/images/login_bg.png")}>
-            <View style={styles.textView}>
+   
+    <ImageBackground style={scaledStyles.imageBanner}
+        source={require("../../../assets/images/login_bg_ok.png")}>
+          {/* <View  style={scaledStyles.logoContainer}> */}
                 <Image
                     source={require("../../../assets/images/logo.png")}
-                    style={scaledStyles.Imagen}
+                    style={scaledStyles.imageLogo}
                 ></Image>
+          
+              <View style={styles.textView}>
                 <Text style={scaledStyles.textoImagen}>Welcome to your sales assistant</Text>
-            </View>
+              </View>
+            {/* </Vi */}
     </ImageBackground>
-    </View>
+    
 
   );
 };
@@ -29,28 +41,39 @@ const scaledStyles = ScaledSheet.create({
   container: {
     flex: 1,
     width: width,
-    height: height,
+    height: 300,
+    justifyContent: 'center',
   },
-  ImBackgound: {
-    //flex:1,
+  imageBanner: {
+    display: 'flex',
+    flexDirection: 'column',
     width: width,
-    height: height / 2
+    height: 300,
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    
   },
-  Imagen: {
-    // flex: 1,
-    width: width / 2,
-    height: height / 9,
-    justifyContent: 'center'
+  logoContainer:{
+    display:'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height:'100%',
+    backgroundColor:'yellow'
+  },
+  imageLogo: {
+    marginTop:'17%',
+    display:'flex',
+    width: '30%',
+    height:  '20%',
+    
   },
   textoImagen: {
-    // flex: 1,
-    // width: '50%',
-    // height: '50%',
     fontSize: '18@ms0.3',
     color: '#1592b9',
     fontWeight: 'bold',
     textAlign: 'center',
-    // resizeMode: 'contain',
+     resizeMode: 'contain',
+     marginBottom:'30%'
   }
 });
 
@@ -60,17 +83,15 @@ const styles = StyleSheet.create({
     //     width: 410,
     // },
     textView: {
-      position: 'absolute',
+      
         justifyContent: 'center',
         alignItems: 'center',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
+        width: '70%'
+       
         
       },
       imageText: {
-        flex:1,
+       
         fontSize: 30,
         color: '#1592b9',
         fontWeight: 'bold',

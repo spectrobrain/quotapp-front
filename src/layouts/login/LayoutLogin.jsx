@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -14,20 +13,19 @@ import LayoutBannerLogin from "./LayoutBannerLogin";
 import { user } from "../../services/Data.json";
 import { useFonts } from "expo-font";
 import { ScaledSheet } from "react-native-size-matters";
-const { width, height } = Dimensions.get('window');
-
+const { width, height } = Dimensions.get("window");
+import LayoutTemplate from "../LayoutTemplate";
 
 const LayoutLogin = ({ navigation }) => {
   let ScreenHeight = Dimensions.get("window").height;
   let ScreenWidth = Dimensions.get("window").width;
-  console.log(ScreenHeight,ScreenWidth);
+  console.log(ScreenHeight, ScreenWidth);
 
   const { email, password } = user;
-console.log(email,user)
+  console.log(email, user);
   const [emailUser, setEmailUser] = useState("");
   const [passwordUser, setPasswordUser] = useState();
   console.log(emailUser, passwordUser);
-
 
   const handledButtonLogin = () => {
     if (emailUser == email && passwordUser == password) {
@@ -44,88 +42,82 @@ console.log(email,user)
   }
 
   return (
-    <View style={scaledStyles.container}>
-      <ImageBackground
-        style={scaledStyles.ImaBackground}
-        source={require("../../../assets/images/app_bg.jpg")}
-      >
-        <LayoutBannerLogin />
-        <View style={[styles.container, {flex:1}]}>
-          <View style={styles.wrapper}>
-            <TextInput
-              style={styles.input}
-              value={emailUser}
-              placeholder="Enter Email..."
-              placeholderTextColor="#FFF"
-              onChangeText={(text) => setEmailUser(text)}
-            />
-            <TextInput
-              style={styles.input}
-              value={passwordUser}
-              placeholder="Enter Password..."
-              placeholderTextColor="#FFF"
-              secureTextEntry
-              onChangeText={(text) => setPasswordUser(text)}
-            />
-          
-           <TouchableOpacity style={{color: 'blue',}}>
-            <Pressable
-              style={styles.button}
-              onPress={() => handledButtonLogin()}
-            >
-              <Text style={styles.textbutton}>Login</Text>
-            </Pressable>
-            </TouchableOpacity>
-            {/* <View style={{ flexDirection: "row", marginTop: 10 }}>
+    <LayoutTemplate>
+      <LayoutBannerLogin />
+    
+      <View style={styles.formLoginContainer}>
+        <TextInput
+          style={styles.inputTextEmail}
+          value={emailUser}
+          placeholder="Enter Email..."
+          placeholderTextColor="#82888C"
+          onChangeText={(text) => setEmailUser(text)}
+        />
+        <TextInput
+          style={styles.inputTextPassword}
+          value={passwordUser}
+          placeholder="Enter Password..."
+          placeholderTextColor="#82888C"
+          secureTextEntry
+          borderLefthWidth="1"
+          onChangeText={(text) => setPasswordUser(text)}
+        />
+
+        <Pressable style={styles.button} onPress={() => handledButtonLogin()}>
+          <Text style={styles.textbutton}>Login</Text>
+        </Pressable>
+
+        {/* <View style={{ flexDirection: "row", marginTop: 10 }}>
               <Text>Don't have an account? </Text>
               {/* <TouchableOpacity onPress={() => navigation.navigate("Home")}> */}
-              {/* <Text>Home</Text> */}
-              {/* </TouchableOpacity> */}
-            {/* </View>  */}
-          </View>
-        </View>
+        {/* <Text>Home</Text> */}
+        {/* </TouchableOpacity> */}
+        {/* </View>  */}
+
         {/* </Home> */}
-      </ImageBackground>
-    </View>
+      </View>
+    </LayoutTemplate>
   );
 };
 
-const scaledStyles = ScaledSheet.create({
-  container: {
-    flex: 1,
-    width: width,
-    height: height,
-  },
-  ImaBackground: {
-    // flex: 1,
-    width: width,
-    height: height,
-  },
-});
-
 const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
+  formLoginContainer: {
+    display: "flex",
+    width: "100%",
+    height: "60%",
+    flexDirection: "column",
+    justifyContent: "flex-start",
     alignItems: "center",
+    elevation:3
   },
-  wrapper: {
-    width: width,
-    height: height / 6,
-  },
-  input: {
-    // marginTop: 1,
-    marginBottom: 15,
-    borderWidth: 3,
+
+  inputTextEmail: {
+    color: "#FFF",
+    paddingLeft: 15,
+    marginTop: "15%",
+    width: "70%",
+    height: "12%",
+    borderWidth: 1,
     borderColor: "#bbb",
-    borderRadius: 30,
-    paddingHorizontal: 12,
-    paddingVertical: 15,
-    textShadowColor: "#fff",
-    color: "#fff",
+    borderRadius: 25,
+    fontSize:12,
+    borderLefthWidth:"5",
+    
+
     //estoy modificando los estilos en el imput carlos//
-    marginLeft: 40,
-    marginRight: 40,
+  },
+  inputTextPassword: {
+    color: "#FFF",
+    marginTop: "6%",
+    paddingLeft: 15,
+    width: "70%",
+    height: "12%",
+    borderWidth: 1,
+    borderColor: "#bbb",
+    borderRadius: 25,
+    fontSize:12,
    
+    //estoy modificando los estilos en el imput carlos//
   },
   link: {
     color: "blue",
@@ -134,19 +126,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#3ed9f4",
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 12,
-    paddingHorizontal: 32,
+    width: "40%",
+    height: "12%",
     borderRadius: 40,
-    elevation: 3,
-    marginTop: 10,
-    //esto lo modifique por la apariencia //
-    marginLeft: 40,
-    marginRight: 40,
+    marginTop: "16%",
   },
   textbutton: {
     color: "#fff",
-    fontSize: 25,
-    letterSpacing: 5,
+    fontSize: 13,
     fontWeight: "bold",
   },
 });
