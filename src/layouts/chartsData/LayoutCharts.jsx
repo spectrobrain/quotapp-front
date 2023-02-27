@@ -8,9 +8,9 @@ import {
   Image,
   Dimensions,
 } from "react-native";
-import LayoutTemplate from "../LayoutTemplate";
+import LayoutTemplateCharts from "./LayoutTemplateCharts";
 import NavBottonChart from "./NavBottonChart";
-import LayoutBarTop from "../LayoutBarTop";
+import ChartView from "./components/ChartView";
 const { width, height } = Dimensions.get("window");
 
 const LayoutCharts = ({ navigation }) => {
@@ -18,11 +18,13 @@ const LayoutCharts = ({ navigation }) => {
   let Width = Dimensions.get("window").width;
   console.log(Height, Width);
   return (
-    <LayoutTemplate>
-      <LayoutBarTop />
-
-     <NavBottonChart/>
-    </LayoutTemplate>
+    <LayoutTemplateCharts>
+      
+       <ChartView/>
+       <ChartView/>
+       <ChartView/>
+     <NavBottonChart/> 
+    </LayoutTemplateCharts>
   );
 };
 
