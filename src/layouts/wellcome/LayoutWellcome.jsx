@@ -3,60 +3,40 @@ import {
   StyleSheet,
   Text,
   View,
-  ImageBackground,
   Pressable,
   Image,
-  Dimensions
+  Dimensions,
 } from "react-native";
-
+import LayoutTemplate from "../LayoutTemplate";
 import * as Amigatable from "react-native-animatable";
 import { Entypo } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-const { width, height } = Dimensions.get('window');
+import LayoutBarTop from "../LayoutBarTop";
+const { width, height } = Dimensions.get("window");
 
 const LayoutWellcome = ({ navigation }) => {
-
- 
   let Height = Dimensions.get("window").height;
   let Width = Dimensions.get("window").width;
-  console.log(Height,Width)
+  console.log(Height, Width);
   return (
-    <ImageBackground
-      style={styles.container}
-      source={require("../../../assets/images/app_bg.jpg")}
-    >
-      <ImageBackground
-        source={require("../../../assets/images/header_bg_ok.png")}
-        style={styles.containerHeader}
-      >
-        <View>
-          <Image
-            source={require("../../../assets/images/logo.png")}
-            style={styles.logoMtq}
-          ></Image>
-          <Pressable
-            style={styles.iconXblack}
-            onPress={() => navigation.navigate("LayoutLogin")}
-          >
-            <Feather name="x" size={34} color="black" />
-          </Pressable>
-        </View>
-      </ImageBackground>
+    <LayoutTemplate>
+      <LayoutBarTop />
+
       {/* imagen donde va el texto que cambia */}
       <View style={styles.containerMessageGlobal}>
         <View style={styles.containerMessage}>
           <Text style={styles.textMessage}>
-            Lorem Ipsum is simply dummy text of the is simply dummy text of
-            theprinting and typesetting industry and typesetting industry.
+            Hello, wellcome, I am your sales assistant, I am here to motivate
+            you and help you achieve your goals !
           </Text>
         </View>
-        <View style={styles.iconMesaggeCaret}>
-          <AntDesign name="caretdown" size={74} color="white" />
-        </View>
+         
+          <AntDesign  name="caretdown" size={80} color="grey" />
+          
       </View>
       {/* animacion del robot  */}
-      <View>
+      {/* <View>
         <Amigatable.Image
           animation="zoomIn"
           iterationCount={1}
@@ -71,46 +51,53 @@ const LayoutWellcome = ({ navigation }) => {
           }}
         />
 
-        {/*icono cambio de texto*/}
-        <Pressable style={styles.iconChevron}>
+      {/*icono cambio de texto*/}
+      {/* <Pressable style={styles.iconChevron}>
           <Entypo name="chevron-right" size={60} color="white" />
-        </Pressable>
-      </View>
-    </ImageBackground>
+        </Pressable>  */}
+      {/* </View> */} 
+    </LayoutTemplate>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: "center",
     width: width,
-    height: '100%',
+    height: "100%",
   },
 
   containerHeader: {
     width: "100%",
-    height: 70,
+    height: "11%",
   },
 
+  containerMessageGlobal: {
+    justifyContent: "center",
+    alignItems:'center',
+    display: "flex",
+    flexWrap:'wrap',
+    flexDirection: "row",
+    marginTop: "13%",
+    height: "40%",
+
+    backgroundColor: "yellow",
+  },
   containerMessage: {
-    marginVertical: 0,
-    marginTop: 1,
-    marginLeft: 100,
-    borderRadius: 5,
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    borderRadius: 1,
     backgroundColor: "#fff",
     width: "auto",
     height: "auto",
+    marginTop: "10%",
+    marginLeft: "10%",
+    marginRight: "10%",
+    
     alignItems: "center",
-    justifyContent: "center",
-  },
-  containerMessageGlobal: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    height: "30%",
-
-    backgroundColor: "yellow",
+    
+    justifyContent: "flex-start",
   },
   container4: {
     size: 30,
@@ -127,9 +114,9 @@ const styles = StyleSheet.create({
   },
 
   textMessage: {
-    marginTop: 5,
-    marginHorizontal: 10,
-    marginVertical: 10,
+    margin: "10%",
+    textAlign: "justify",
+    backgroundColor: "grey",
   },
   iconXblack: {
     width: 800,
@@ -139,15 +126,14 @@ const styles = StyleSheet.create({
     left: 360,
     right: 0,
   },
-  iconChevron: {
-    position: "absolute",
-    top: 120,
-    left: 260,
-    right: 0,
-  },
+  iconChevron: {},
   iconMesaggeCaret: {
-    marginVertical: -30,
-    marginLeft: 168,
+    
+    flexDirection: "row",
+    width: width,
+    height: 65,
+    
+    backgroundColor: "grey",
   },
 });
 

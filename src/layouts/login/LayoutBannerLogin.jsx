@@ -53,13 +53,7 @@ const scaledStyles = ScaledSheet.create({
     justifyContent: 'space-evenly',
     
   },
-  logoContainer:{
-    display:'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height:'100%',
-    backgroundColor:'yellow'
-  },
+  
   imageLogo: {
     marginTop:'17%',
     display:'flex',
