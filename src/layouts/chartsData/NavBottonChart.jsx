@@ -12,20 +12,20 @@ const NavBottonChart = ({navigation}) => {
        onPress={ handleButtonGraphic}>
         <Image
           style={styles.imageGraphChart}
-          source={require("../../../../assets/images/icon1.png")}
+          source={require("../../../assets/images/icon1.png")}
          
         />
       </Pressable>
       <Pressable style={styles.viewGraph}>
         <Image
           style={styles.imageGraph}
-          source={require("../../../../assets/images/icon2.png")}
+          source={require("../../../assets/images/icon2.png")}
         />
       </Pressable>
       <Pressable style={styles.viewGiftLogo}>
         <Image
           style={styles.imageGifRobot}
-          source={require("../../../../assets/images/MASCOT.gif")}
+          source={require("../../../assets/images/MASCOT.gif")}
         />
       </Pressable>
     </View>
