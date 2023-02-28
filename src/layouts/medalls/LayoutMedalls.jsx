@@ -2,9 +2,12 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const LayoutTipsRobot= ({children}) => {
+const LayoutMedalls= ({children}) => {
   return (
     
+   
+    <View>
+    <Text> List Medalls</Text>
    
     <LinearGradient
     style={styles.background}
@@ -13,6 +16,8 @@ const LayoutTipsRobot= ({children}) => {
      start={{ x: 0.1 , y: 0.6 }}
      //locations={[ 0.3,0.2,0.65]}
   />
+    
+    </View>
     
     
     
@@ -29,4 +34,4 @@ const styles = StyleSheet.create({
       },
 }); 
 
-export default LayoutTipsRobot;
+export default LayoutMedalls;
