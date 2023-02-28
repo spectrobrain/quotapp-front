@@ -23,7 +23,7 @@ const LayoutLogin = ({ navigation }) => {
 
   const { email, password } = user;
   console.log(email, user);
-  const [emailUser, setEmailUser] = useState("");
+                                
   const [passwordUser, setPasswordUser] = useState();
   console.log(emailUser, passwordUser);
 

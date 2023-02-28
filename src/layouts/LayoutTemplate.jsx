@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Dimensions,ImageBackground } from 'react-native'
-import { ScaledSheet } from "react-native-size-matters";
+import { View, Dimensions,ImageBackground,StyleSheet } from 'react-native'
+
 const { width } = Dimensions.get('window');
 
 const LayoutTemplate = ({children}) => {
@@ -8,9 +8,9 @@ const LayoutTemplate = ({children}) => {
     
 
   return (
-    <View style={scaledStyles.container}>
+    <View style={styles.container}>
         <ImageBackground
-        style={scaledStyles.ImageBackground}
+        style={styles.ImageBackground}
         source={require("../../assets/images/app_bg.jpg")}
       >
         {children}
@@ -18,7 +18,7 @@ const LayoutTemplate = ({children}) => {
     </View>
   )
 }
-const scaledStyles = ScaledSheet.create({
+const styles = StyleSheet.create({
    
     container: {
       flex: 1,

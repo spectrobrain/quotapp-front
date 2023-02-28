@@ -1,26 +1,24 @@
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import  {quotes}  from "../../../services/Data.json";
-
-import {   StyleSheet} from "react-native";
+import {  View, StyleSheet} from "react-native";
 
 
-const SliderHorizontal = ({sales}) => {
-  console.log(sales)
-  const { sliderProgress}= styles
+const SliderVertical = (salesInfo) => {
+  console.log('salesinfovertical',salesInfo)
+ 
+  const { sliderView,shadowSliderView,sliderProgress}= styles
   return (
     
-      
+      <View style={[sliderView,shadowSliderView]}>
         <LinearGradient
-        style={{...sliderProgress,width:`${sales}%`}} //destructuracion para hacer dinaico el slider
-          
+          style={{...sliderProgress,height:'80%'}}
           colors={["#51e7fb", "#0185f2"]}
           end={{ x: 1, y: 1.2 }}
           start={{ x: 1, y: 0.1 }}
           locations={[0.1, 0.9]}
         />
         
-      
+      </View>
       //#1ca9f2
       
   );
@@ -30,15 +28,16 @@ const styles = StyleSheet.create({
   sliderView: {
     justifyContent: "flex-end",
     flexDirection: "column",
-    height: "100%",
+    width: "80%",
+    height: "60%",
     borderRadius: 20,
+
     backgroundColor: "#0a667d",
   },
   sliderProgress: {
     flexDirection: "column",
     alignItems:'flex-end',
-    width: "80%",
-    height:'92%',
+    width: "95%",
     margin: 1,
     borderRadius: 20,
    
@@ -58,4 +57,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default SliderHorizontal;
+export default SliderVertical;

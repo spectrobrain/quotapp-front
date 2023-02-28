@@ -1,29 +1,26 @@
-import React from "react";
+import React,{useState} from "react";
 import {
   StyleSheet,
-  Text,
-  View,
-  ImageBackground,
-  Pressable,
-  Image,
   Dimensions,
 } from "react-native";
-import LayoutTemplateCharts from "./LayoutTemplateCharts";
+import LayoutTemplateCharts from "../LayoutYearCharts";
 import NavBottonChart from "./NavBottonChart";
 import ChartView from "./components/ChartView";
+import ChartViewVertical from "./components/ChartViewVertical";
+import {quotes} from '../../services/Data.json'
 const { width, height } = Dimensions.get("window");
 
 const LayoutCharts = ({ navigation }) => {
   let Height = Dimensions.get("window").height;
   let Width = Dimensions.get("window").width;
   console.log(Height, Width);
+
+  const [salesUser,setSalesUser] = useState(quotes)
   return (
     <LayoutTemplateCharts>
-      
-       <ChartView/>
-       <ChartView/>
-       <ChartView/>
-     <NavBottonChart/> 
+      { salesUser ? salesUser?.map((sale)=><ChartView key={sale.id} salesInfo={sale}/>): null }
+       <ChartViewVertical />
+     <NavBottonChart navigation={navigation}/> 
     </LayoutTemplateCharts>
   );
 };

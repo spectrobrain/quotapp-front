@@ -9,7 +9,7 @@ const NavBottonChart = ({navigation}) => {
   return (
     <View style={styles.chartView}>
       <Pressable style={styles.viewGraph}
-       onPress={ handleButtonGraphic}>
+       onPress={()=> handleButtonGraphic()}>
         <Image
           style={styles.imageGraphChart}
           source={require("../../../assets/images/icon1.png")}

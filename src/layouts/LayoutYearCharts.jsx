@@ -7,7 +7,7 @@ import {
   Image,
   Dimensions,
 } from "react-native";
-import LayoutTemplate from "../LayoutTemplate";
+import LayoutTemplate from "./LayoutTemplate";
 import { ScaledSheet } from "react-native-size-matters";
 import { Feather } from "@expo/vector-icons";
 import * as Amigatable from "react-native-animatable";
@@ -20,16 +20,16 @@ const LayoutTemplateCharts = ({ navigation, children }) => {
   console.log(Height, Width);
   return (
     <LayoutTemplate>
-      <View style={scaledStyles.containerHeader}>
+      <View style={styles.containerHeader}>
         <Image
-          style={scaledStyles.imageLogo}
-          source={require("../../../assets/images/logo_w.png")}
+          style={styles.imageLogo}
+          source={require("../../assets/images/logo_w.png")}
         ></Image>
         <Pressable
-          style={scaledStyles.iconXblack}
+          style={styles.iconXblack}
           onPress={() => navigation.navigate("LayoutLogin")}
         >
-          <Feather style={scaledStyles.iconX} name="x" size={34} color="#fff" />
+          <Feather style={styles.iconX} name="x" size={34} color="#fff" />
         </Pressable>
       </View>
       {children}
@@ -37,7 +37,7 @@ const LayoutTemplateCharts = ({ navigation, children }) => {
   );
 };
 
-const scaledStyles = ScaledSheet.create({
+const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     width: width,
