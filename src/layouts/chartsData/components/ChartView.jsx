@@ -1,4 +1,3 @@
-import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useContext } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { useFonts } from "expo-font";
@@ -16,40 +15,40 @@ const ChartView = ({ children, salesInfo }) => {
   //   return null;
   // }
 
-//   const [item] = quotes;
+  const [item] = quotes;
 
   //const { sliderProgress } = styles;
-  //const [dataManager, setDataManager] = useState(salesInfo);
+  const [dataManager, setDataManager] = useState(salesInfo);
 
-//   const getData = () => {
-//     {
-//       setDataManager((prev) => {
-//         return {
-//           ...prev,
-//           leftTextTop: dataManager.title,
-//           rightTextTop: dataManager.sales,
-//           rightTextBottom: dataManager.description,
-//         };
-//       });
-//     }
-//   };
-//   useEffect(() => {
-//     getData();
-//   }, []);
+  const getData = () => {
+    {
+      setDataManager((prev) => {
+        return {
+          ...prev,
+          leftTextTop: dataManager.title,
+          rightTextTop: dataManager.sales,
+          rightTextBottom: dataManager.description,
+        };
+      });
+    }
+  };
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <View style={styles.chartView}>
-      {/* <View style={styles.textViewTop}>
+      <View style={styles.textViewTop}>
         <Text style={styles.leftText}>{dataManager?.leftTextTop}</Text>
         <Text style={styles.rightText}>{dataManager?.rightTextTop}%</Text>
-      </View> */}
-      <View style={[styles.sliderView,styles.shadowSliderView]}>
-        <SliderHorizontal/>
       </View>
-      {/* <View style={styles.textViewTop}>
+      <View style={[styles.sliderView,styles.shadowSliderView]}>
+        <SliderHorizontal  sales = {dataManager.sales}/>
+      </View>
+      <View style={styles.textViewTop}>
         <Text style={styles.rightTextBotton}>{dataManager?.rightTextBottom}</Text>
       </View>
-      <View style={styles.viewText}></View> */}
+      <View style={styles.viewText}></View>
     </View>
   );
 };

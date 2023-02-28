@@ -2,9 +2,11 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const LayoutMonthlyChart= ({children}) => {
+const LayoutTipsRobot= ({children}) => {
   return (
     
+    <View>
+    <Text> Tips Robot</Text>
    
     <LinearGradient
     style={styles.background}
@@ -13,6 +15,8 @@ const LayoutMonthlyChart= ({children}) => {
      start={{ x: 0.1 , y: 0.6 }}
      //locations={[ 0.3,0.2,0.65]}
   />
+    
+    </View>
     
     
     
@@ -29,4 +33,4 @@ const styles = StyleSheet.create({
       },
 }); 
 
-export default LayoutMonthlyChart;
+export default LayoutTipsRobot;
