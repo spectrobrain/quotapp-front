@@ -7,7 +7,7 @@ import LayoutTemplateCharts from "../LayoutYearCharts";
 import NavBottonChart from "./NavBottonChart";
 import ChartView from "./components/ChartView";
 import ChartViewVertical from "./components/ChartViewVertical";
-import {quotes} from '../../services/Data.json'
+import {quotes,lasttreemonths} from '../../services/Data.json'
 const { width, height } = Dimensions.get("window");
 
 const LayoutCharts = ({ navigation }) => {
@@ -16,10 +16,12 @@ const LayoutCharts = ({ navigation }) => {
   console.log(Height, Width);
 
   const [salesUser,setSalesUser] = useState(quotes)
+  console.log(lasttreemonths)
+  //const [salesMonths,setSalesMonths] = useState(lasttreemonths)
   return (
     <LayoutTemplateCharts>
       { salesUser ? salesUser?.map((sale)=><ChartView key={sale.id} salesInfo={sale}/>): null }
-       <ChartViewVertical />
+       <ChartViewVertical  />
      <NavBottonChart navigation={navigation}/> 
     </LayoutTemplateCharts>
   );
