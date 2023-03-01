@@ -6,7 +6,7 @@ import {   StyleSheet} from "react-native";
 
 
 const SliderHorizontal = ({sales}) => {
-  console.log(sales)
+  
   const { sliderProgress}= styles
   return (
     

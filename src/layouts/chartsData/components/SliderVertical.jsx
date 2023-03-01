@@ -1,30 +1,25 @@
-import React from "react";
-import { LinearGradient } from "expo-linear-gradient";
-import {  View, StyleSheet} from "react-native";
+import React from "react"
+import { LinearGradient } from "expo-linear-gradient"
+import { View, StyleSheet } from "react-native"
+import { lasttreemonths } from "../../../services/Data.json"
 
+const SliderVertical = ({ quote }) => {
+  const { sliderView, shadowSliderView, sliderProgress } = styles
 
-const SliderVertical = (salesInfo) => {
-  console.log('salesinfovertical',salesInfo)
- 
-  const { sliderView,shadowSliderView,sliderProgress}= styles
   return (
-    
-      <View style={[sliderView,shadowSliderView]}>
-        <LinearGradient
-          style={{...sliderProgress,height:'80%'}}
-          colors={["#51e7fb", "#0185f2"]}
-          end={{ x: 1, y: 1.2 }}
-          start={{ x: 1, y: 0.1 }}
-          locations={[0.1, 0.9]}
-        />
-        
-      </View>
-      //#1ca9f2
-      
-  );
-};
+    <View style={[sliderView, shadowSliderView]}>
+      <LinearGradient
+        style={{ ...sliderProgress, height: `${quote}%` }}
+        colors={["#51e7fb", "#0185f2"]}
+        end={{ x: 1, y: 1.2 }}
+        start={{ x: 1, y: 0.1 }}
+        locations={[0.1, 0.9]}
+      />
+    </View>
+    //#1ca9f2
+  )
+}
 const styles = StyleSheet.create({
-  
   sliderView: {
     justifyContent: "flex-end",
     flexDirection: "column",
@@ -36,11 +31,10 @@ const styles = StyleSheet.create({
   },
   sliderProgress: {
     flexDirection: "column",
-    alignItems:'flex-end',
+    alignItems: "flex-end",
     width: "95%",
     margin: 1,
     borderRadius: 20,
-   
   },
   shadowSliderView: {
     shadowColor: "#000",
@@ -48,13 +42,10 @@ const styles = StyleSheet.create({
       width: 0,
       height: 7,
     },
-    shadowOpacity:1,
+    shadowOpacity: 1,
     shadowRadius: 5,
-    elevation:8,
-      
+    elevation: 8,
   },
-  
+})
 
-});
-
-export default SliderVertical;
+export default SliderVertical

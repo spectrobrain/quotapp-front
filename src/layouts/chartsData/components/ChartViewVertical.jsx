@@ -5,9 +5,11 @@ import { useFonts } from "expo-font";
 // import { useDataSeller } from "../../../hooks/useDataSeller";
  import { lasttreemonths } from "../../../services/Data.json";
 
-const YearChartView = () => {
- console.log(lasttreemonths)
-    const [dataSales,setDataSales] = useState([...lasttreemonths])
+const YearChartView = (salesMonths) => {
+ console.log('last',lasttreemonths)
+    const [dataSales,setDataSales] = useState(lasttreemonths)
+    console.log(dataSales)
+    console.log(salesMonths)
   const {
     chartView,
     chartSlideMonths,
@@ -16,24 +18,25 @@ const YearChartView = () => {
     textPastMonth,
   } = styles;
 
-  console.log('datasales',{dataSales})
-  
-//  const { dataSeller} = useDataSeller();
-//  console.log(dataSeller)
+ 
   const [fontsLoaded] = useFonts({
     Roboto: require("../../../../assets/fonts/Roboto-Light.ttf"),
   });
 
   //   return null;
   // }
+//const {month}= lasttreemonths
+const months = lasttreemonths?.map((month) => month.month)
+const quote = lasttreemonths?.map((month) => month.quote)
+
   return (
     <View style={[chartView]}>
       <View style={viewTextPast}>
         <Text style={textPastMonth}>Past month Sales</Text>
-        <Text style={textAcomplishment}>92% Average Acomplishment</Text>
+        <Text style={textAcomplishment}>80.6% Average Acomplishment</Text>
       </View>
       <View style={chartSlideMonths}>
-      { dataSales ? dataSales?.map(({monyh,quote},index)=><ViewSliderVertical key={`${quote}-${index}`} salesMonths={quote}/>): null }
+      { dataSales ? lasttreemonths?.map((months,index)=><ViewSliderVertical key={`${months?.quote}-${index}`} month={months.month} quote={months.quote} />): null }
       </View>
     </View>
   );
