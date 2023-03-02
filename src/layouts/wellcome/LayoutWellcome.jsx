@@ -31,9 +31,9 @@ const LayoutWellcome = ({ navigation }) => {
             you and help you achieve your goals !
           </Text>
         </View>
-         
+         <View style={styles.containerIcon}>
           <AntDesign  name="caretdown" size={80} color="grey" />
-          
+          </View>
       </View>
       {/* animacion del robot  */}
       {/* <View>
@@ -73,9 +73,9 @@ const styles = StyleSheet.create({
   },
 
   containerMessageGlobal: {
-    justifyContent: "center",
-    alignItems:'center',
     display: "flex",
+    justifyContent: "center",
+    alignItems:'flex-start',
     flexWrap:'wrap',
     flexDirection: "row",
     marginTop: "13%",
@@ -105,6 +105,14 @@ const styles = StyleSheet.create({
     borderEndWidth: 4,
     borderColor: "#272727",
     bottom: 0,
+  },
+  containerIcon:{
+    displey:'flex',
+    flexDirection:'column',
+    backgroundColor: "red",
+    justifyContent:'flex-start',
+    alignContent: 'flex-start',
+    height:75
   },
   logoMtq: {
     marginLeft: 15,

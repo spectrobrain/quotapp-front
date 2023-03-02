@@ -25,11 +25,11 @@ const LayoutLogin = ({ navigation }) => {
   console.log(email, user);
                                 
   const [passwordUser, setPasswordUser] = useState();
-  console.log(emailUser, passwordUser);
+  const [emailUser,setEmailUser]= useState();
 
   const handledButtonLogin = () => {
     if (emailUser == email && passwordUser == password) {
-      navigation.navigate("LayoutWellcome");
+      navigation.navigate("LayoutCharts");
     }
   };
 
