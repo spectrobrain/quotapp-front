@@ -3,7 +3,7 @@ import {
   StyleSheet,
   Dimensions,
 } from "react-native";
-import LayoutTemplateCharts from "../LayoutYearCharts";
+import LayoutTemplateCharts from "../LayoutTemplateCharts";
 import NavBottonChart from "./NavBottonChart";
 import ChartView from "./components/ChartView";
 import ChartViewVertical from "./components/ChartViewVertical";
