@@ -1,6 +1,7 @@
-import { StyleSheet, View } from 'react-native';
+import { AppRegistry,StyleSheet, View } from 'react-native';
 import ItemState  from './src/contexts/itemContext/ItemState'
-import Main from './src/Main';
+import Navigation from './src/routes/Navigation'
+//import Main from './src/Main';
 //import LayoutTemplate from './src/layouts/LayoutTemplate';
 //import LayoutWellcome from './src/layouts/wellcome/LayoutWellcome';
 import LayoutCharts from './src/layouts/chartsData/LayoutCharts';
@@ -9,15 +10,17 @@ import LayoutCharts from './src/layouts/chartsData/LayoutCharts';
 export default function App() {
   return (
     <ItemState>
+      <Navigation>
       {/* <Main/> */}
       {/* <LayoutTemplate/> */}
       <LayoutCharts/>
       {/* <LayoutWellcome/> */}
+      </Navigation>
     </ItemState>
    
   );
 }
-
+AppRegistry.registerComponent(App)
 const styles = StyleSheet.create({
   container: {
     flex: 1,

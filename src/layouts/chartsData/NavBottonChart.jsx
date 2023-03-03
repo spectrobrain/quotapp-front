@@ -3,26 +3,34 @@ import React from "react";
 
 const NavBottonChart = ({navigation}) => {
 
-  const handleButtonGraphic = () => {
+  const handleButtonGraphicMonths = () => {
     navigation.navigate("GraphMonths")
+  }
+  const handleButtonGraphicMedalls = () => {
+    navigation.navigate("Medalls")
+  }
+  const handleButtonGraphicTipsRobot = () => {
+    navigation.navigate("IATips")
   }
   return (
     <View style={styles.chartView}>
       <Pressable style={styles.viewGraph}
-       onPress={()=> handleButtonGraphic()}>
+       onPress={()=> handleButtonGraphicMonths()}>
         <Image
           style={styles.imageGraphChart}
           source={require("../../../assets/images/icon1.png")}
          
         />
       </Pressable>
-      <Pressable style={styles.viewGraph}>
+      <Pressable style={styles.viewGraph}
+      onPress={()=> handleButtonGraphicMedalls ()}>
         <Image
           style={styles.imageGraph}
           source={require("../../../assets/images/icon2.png")}
         />
       </Pressable>
-      <Pressable style={styles.viewGiftLogo}>
+      <Pressable style={styles.viewGiftLogo}
+      onPress={()=> handleButtonGraphicTipsRobot ()}>
         <Image
           style={styles.imageGifRobot}
           source={require("../../../assets/images/MASCOT.gif")}
