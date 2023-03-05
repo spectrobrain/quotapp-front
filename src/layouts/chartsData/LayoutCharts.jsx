@@ -11,9 +11,8 @@ import {quotes,lasttreemonths} from '../../services/Data.json'
 const { width, height } = Dimensions.get("window");
 
 const LayoutCharts = ({ navigation }) => {
-  let Height = Dimensions.get("window").height;
-  let Width = Dimensions.get("window").width;
-  console.log(Height, Width);
+ 
+  
 
   const [salesUser,setSalesUser] = useState(quotes)
   console.log(lasttreemonths)
