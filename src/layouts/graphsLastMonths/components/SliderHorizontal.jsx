@@ -1,15 +1,21 @@
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import  {quotes}  from "../../../services/Data.json";
+//import  {quotes}  from "../../../services/Data.json";
 
-import {   StyleSheet} from "react-native";
+import {   StyleSheet,View,Text} from "react-native";
 
 
-const SliderHorizontal = ({}) => {
+const SliderHorizontal = () => {
   
-  const { sliderProgress}= styles
+  const { sliderProgress,
+          sliderView,
+          shadowSliderView,
+          textMonthChart,
+          textMonthquote,
+          sliderViewContainer}= styles
   return (
-    
+    <View style={sliderViewContainer}>
+    <View style={[   sliderView,shadowSliderView]}>
       
         <LinearGradient
         style={{...sliderProgress,width:'67%'}} //destructuracion para hacer dinaico el slider
@@ -20,28 +26,48 @@ const SliderHorizontal = ({}) => {
           locations={[0.1, 0.9]}
         />
         
-      
+      </View>  
+      <Text style={textMonthChart}>JAN-<Text style={textMonthquote}>6.000</Text>/12.000</Text>
+      </View>
       //#1ca9f2
       
   );
 };
 const styles = StyleSheet.create({
-  
+  sliderViewContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    width: "90%",
+    height: "13%",
+    borderRadius: 10,
+    marginTop: '1%',
+    
+    
+  },
   sliderView: {
-    justifyContent: "flex-end",
     flexDirection: "column",
-    height: "100%",
+    width: "37%",
+    height: "75%",
     borderRadius: 20,
-    backgroundColor: "#0a667d",
+    backgroundColor: "#036481",
   },
   sliderProgress: {
     flexDirection: "column",
     alignItems:'flex-end',
-    width: "80%",
+    
     height:'92%',
     margin: 1,
     borderRadius: 20,
    
+  },
+  textMonthChart: {
+    fontSize: 12,
+    marginLeft:'3%'
+  },
+  textMonthquote: {
+    fontSize: 12,
+    color:'#0185f2'
   },
   shadowSliderView: {
     shadowColor: "#000",
