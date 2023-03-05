@@ -21,16 +21,16 @@ const LayoutLogin = ({ navigation }) => {
   let ScreenWidth = Dimensions.get("window").width;
   console.log(ScreenHeight, ScreenWidth);
 
-  const { email, password } = user;
-  console.log(email, user);
+  // const { email, password } = user;
+  // console.log(email, user);
                                 
   const [passwordUser, setPasswordUser] = useState();
   const [emailUser,setEmailUser]= useState();
 
   const handledButtonLogin = () => {
-    if (emailUser == email && passwordUser == password) {
+    //if (emailUser == email && passwordUser == password) {
       navigation.navigate("LayoutCharts");
-    }
+   // }
   };
 
   const [fontsLoaded] = useFonts({

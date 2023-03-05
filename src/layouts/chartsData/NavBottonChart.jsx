@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     marginTop: 0,
     marginLeft: 10,
     width: "70%",
-    height: 85,
+    height: 85,            
   },
 
   shadowSliderView: {
