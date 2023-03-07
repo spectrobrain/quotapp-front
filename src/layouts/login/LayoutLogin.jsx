@@ -4,22 +4,20 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity,
-  ImageBackground,
   Pressable,
   Dimensions,
 } from "react-native";
 import LayoutBannerLogin from "./LayoutBannerLogin";
 import { user } from "../../services/Data.json";
 import { useFonts } from "expo-font";
-import { ScaledSheet } from "react-native-size-matters";
+
 const { width, height } = Dimensions.get("window");
 import LayoutTemplate from "../LayoutTemplate";
 
 const LayoutLogin = ({ navigation }) => {
   let ScreenHeight = Dimensions.get("window").height;
   let ScreenWidth = Dimensions.get("window").width;
-  console.log(ScreenHeight, ScreenWidth);
+
 
   // const { email, password } = user;
   // console.log(email, user);
@@ -29,7 +27,7 @@ const LayoutLogin = ({ navigation }) => {
 
   const handledButtonLogin = () => {
     //if (emailUser == email && passwordUser == password) {
-      navigation.navigate("LayoutCharts");
+      navigation.navigate("LayoutWellcome");
    // }
   };
 
@@ -66,15 +64,6 @@ const LayoutLogin = ({ navigation }) => {
         <Pressable style={styles.button} onPress={() => handledButtonLogin()}>
           <Text style={styles.textbutton}>Login</Text>
         </Pressable>
-
-        {/* <View style={{ flexDirection: "row", marginTop: 10 }}>
-              <Text>Don't have an account? </Text>
-              {/* <TouchableOpacity onPress={() => navigation.navigate("Home")}> */}
-        {/* <Text>Home</Text> */}
-        {/* </TouchableOpacity> */}
-        {/* </View>  */}
-
-        {/* </Home> */}
       </View>
     </LayoutTemplate>
   );

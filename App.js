@@ -13,14 +13,14 @@ export default function App() {
       <Navigation>
       {/* <Main/> */}
       {/* <LayoutTemplate/> */}
-      <LayoutCharts/>
+     
       {/* <LayoutWellcome/> */}
       </Navigation>
     </ItemState>
    
   );
 }
-AppRegistry.registerComponent(App)
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

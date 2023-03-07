@@ -8,6 +8,7 @@ import LayoutGraphLastMonths from "../layouts/graphsLastMonths/LayoutGraphLastMo
 import LayoutTipsRobot from './../layouts/tipsRobot/LayoutTipsRobot';
 import  LayoutCharts from '../layouts/chartsData/LayoutCharts';
 import LayoutMedalls from './../layouts/medalls/LayoutMedalls';
+import LayoutBarTop from './../layouts/LayoutBarTop';
 
 const Stack = createNativeStackNavigator();
 //initialRouteName="Login"
@@ -28,6 +29,7 @@ const Navigation = () => {
         <Stack.Screen name="IATips" component={LayoutTipsRobot} options={{ headerShown: false }}/>
         <Stack.Screen name="Medalls" component={LayoutMedalls } options={{ headerShown: false }}/>
         <Stack.Screen name="LayoutCharts" component={LayoutCharts} options={{ headerShown: false }}/>
+        <Stack.Screen name="IconBack" component={LayoutCharts} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
