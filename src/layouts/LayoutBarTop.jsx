@@ -27,7 +27,7 @@ const LayoutBarTop = ({navigation}) => {
 
       <Pressable
         style={scaledStyles.iconXblack}
-        onPress={() => navigation.navigate("LayoutLogin")}
+        onPress={() => navigation.navigate("IconBack")}
       >
         <Feather style={scaledStyles.iconX} name="x" size={34} color="black" />
       </Pressable>

@@ -15,10 +15,10 @@ const LayoutCharts = ({ navigation }) => {
   
 
   const [salesUser,setSalesUser] = useState(quotes)
-  console.log(lasttreemonths)
+  
   //const [salesMonths,setSalesMonths] = useState(lasttreemonths)
   return (
-    <LayoutTemplateCharts>
+    <LayoutTemplateCharts navigation={navigation}>
       { salesUser ? salesUser?.map((sale)=><ChartView key={sale.id} salesInfo={sale}/>): null }
        <ChartViewVertical  />
      <NavBottonChart navigation={navigation}/> 

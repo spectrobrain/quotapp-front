@@ -7,7 +7,7 @@ import { quotes } from "../../../services/Data.json";
 //import ContextItem from "../../../contexts/itemContext/ContextItem";
 //import SliderHorizontal from "../components/SliderHorizontal";
 
-const ChartViewTipsRobot = (                                                                                                                                  ) => {
+const ViewTipsRobot = (                                                                                                                                  ) => {
 //   const dataUser = useContext(ContextItem); //data
 const {
   textMonthChart,
@@ -26,13 +26,14 @@ const {
   
 
   return (
-    <View style={styles.chartView}>
+    <View style={styles.tipsView}>
        <Text style={styles.textTip}>When thequality of the relationship 
        between the buyer and de seller moves toward a strategic 
        partnership, the selling strategy gets more involved than even
         consultative selling. In strategic-partner selling, both
         parties invest resources and share their expertise with each 
         other to create solutions than jointly grow one another's bussines
+        
         
         </Text>
     </View>  
@@ -41,7 +42,7 @@ const {
 };
 
 const styles = StyleSheet.create({
-  chartView: {
+  tipsView: {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
@@ -49,6 +50,8 @@ const styles = StyleSheet.create({
     height: "auto",
     borderRadius: 30,
     marginTop: '7%',
+    marginLeft:'6%',
+    marginRight: '6%',
 
     backgroundColor: "#fff",
     
@@ -72,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ChartViewTipsRobot;
+export default ViewTipsRobot;
