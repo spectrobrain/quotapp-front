@@ -1,7 +1,6 @@
 import React from "react";
 import {
   StyleSheet,
-  Text,
   View,
   Pressable,
   Image,
@@ -15,9 +14,7 @@ import * as Amigatable from "react-native-animatable";
 const { width, height } = Dimensions.get("window");
 
 const LayoutTemplateCharts = ({ navigation, children }) => {
-  let Height = Dimensions.get("window").height;
-  let Width = Dimensions.get("window").width;
-  console.log(Height, Width);
+  
   return (
     <LayoutTemplate>
       <View style={styles.containerHeader}>
@@ -27,7 +24,7 @@ const LayoutTemplateCharts = ({ navigation, children }) => {
         ></Image>
         <Pressable
           style={styles.iconXblack}
-          onPress={() => navigation.navigate("LayoutLogin")}
+          onPress={() => navigation.navigate("IconBack")}
         >
           <Feather style={styles.iconX} name="x" size={34} color="#fff" />
         </Pressable>

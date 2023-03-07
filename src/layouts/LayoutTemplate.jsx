@@ -21,11 +21,11 @@ const LayoutTemplate = ({children}) => {
 const styles = StyleSheet.create({
    
     container: {
-      flex: 1,
       width: width,
       height: '100%',
       justifyContent: 'center',
       alignItems: 'center',
+      
     },
     ImageBackground: {
       // flex: 1,

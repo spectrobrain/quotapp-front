@@ -6,10 +6,9 @@ import { useFonts } from "expo-font";
  import { lasttreemonths } from "../../../services/Data.json";
 
 const YearChartView = (salesMonths) => {
- console.log('last',lasttreemonths)
+ 
     const [dataSales,setDataSales] = useState(lasttreemonths)
-    console.log(dataSales)
-    console.log(salesMonths)
+    
   const {
     chartView,
     chartSlideMonths,
@@ -26,8 +25,7 @@ const YearChartView = (salesMonths) => {
   //   return null;
   // }
 //const {month}= lasttreemonths
-const months = lasttreemonths?.map((month) => month.month)
-const quote = lasttreemonths?.map((month) => month.quote)
+
 
   return (
     <View style={[chartView]}>

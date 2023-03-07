@@ -5,7 +5,7 @@ import LayoutTemplateCharts from '../LayoutTemplateCharts';
 import ChartViewMonth from './components/ChartViewMonth';
 const { width, height } = Dimensions.get("window");
 
-const LayoutGraphLastMonths= () => {
+const LayoutGraphLastMonths= ({navigation}) => {
   const {
     textTitle,
     
@@ -13,7 +13,7 @@ const LayoutGraphLastMonths= () => {
 
   return (
 
-    <LayoutTemplateCharts>
+    <LayoutTemplateCharts navigation={navigation}>
       <Text style={textTitle}>Monthly Quote</Text>
       <Text style={styles.textDescription}>You have met an average of 90% of the objetive
          sales quota, visit AI chat to receive advice on how to increase your results</Text>

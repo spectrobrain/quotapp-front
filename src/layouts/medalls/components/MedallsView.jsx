@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { View, StyleSheet, Text ,Image} from "react-native";
 import { useFonts } from "expo-font";
+import CardMedall from "./CardMedall";
 
 import { quotes } from "../../../services/Data.json";
 
-//import ContextItem from "../../../contexts/itemContext/ContextItem";
-//import SliderHorizontal from "../components/SliderHorizontal";
 
 const ChartViewMedalls = (                                                                                                                                  ) => {
 //   const dataUser = useContext(ContextItem); //data
@@ -22,37 +21,49 @@ const {
 
   const [item] = quotes;
 
-  //const { sliderProgress } = styles;
+  const { medallsView } = styles;
   
 
   return (
     
-       <Image
-          style={styles.imageLogo}
-          source={require("../../../../assets/images/dialogo1rd.png")}
-        ></Image>
+      <View style={medallsView}>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+        <CardMedall/>
+      </View>
       
     
   );
 };
 
 const styles = StyleSheet.create({
-  chartView: {
-    flexDirection: "column",
+  medallsView: {
+    flexDirection: "row",
+    flexWrap: 'wrap',
     alignItems: "center",
+    
     justifyContent: "center",
-    width: "100%",
-    height: "55%",
+    width: "73%",
+    height: "50%",
     borderRadius: 10,
     marginTop: '3%',
-    
+   
   },
   imageLogo: {
     marginTop:'17%',
     display:'flex',
     width: '86%',
     height:  '67%',
-    backgroundColor:'yellow'
+    
     
   },
   textMonthChart: {
