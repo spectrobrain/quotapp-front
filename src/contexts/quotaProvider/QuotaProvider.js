@@ -1,4 +1,4 @@
-import ContextItem from "./ContextItem";
+import ContextQuota from "./QuotaContext";
 import { useState } from "react";
 import { getDataService } from "../../services/serviceFetch";
 
@@ -11,11 +11,11 @@ const ItemState = ({ children }) => {
   };
 
   return (
-    <ContextItem.Provider
+    <ContextQuota.Provider
       value={{  getData,  }}
     >
       {children}
-    </ContextItem.Provider>
+    </ContextQuota.Provider>
   );
 };
 

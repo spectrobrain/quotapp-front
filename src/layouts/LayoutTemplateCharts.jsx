@@ -16,7 +16,7 @@ const { width, height } = Dimensions.get("window");
 const LayoutTemplateCharts = ({ navigation, children }) => {
   
   return (
-    <LayoutTemplate>
+    <LayoutTemplate navigation={navigation}>
       <View style={styles.containerHeader}>
         <Image
           style={styles.imageLogo}
@@ -24,7 +24,7 @@ const LayoutTemplateCharts = ({ navigation, children }) => {
         ></Image>
         <Pressable
           style={styles.iconXblack}
-          onPress={() => navigation.navigate("IconBack")}
+          onPress={() => navigation.goBack()}
         >
           <Feather style={styles.iconX} name="x" size={34} color="#fff" />
         </Pressable>

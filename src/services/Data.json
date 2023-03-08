@@ -8,6 +8,7 @@
         "id": 1,
         "title": "Daily Quota",
         "sales": 69.2,
+        "salesTotal": 200,
         "quote": 289,
         "description": "USD $ 52K"
       },
@@ -15,13 +16,15 @@
         "id": 2,
         "title": "Monthly Quota",
         "sales": 76.9,
+        "salesTotal": 5000,
         "quote": 6500,
         "description": "3 Days to monthly cut"
       },
       {
         "id": 3,
         "title": "Yearly Quota",
-        "sales": 65.1,
+        "salesTotal": 11350,
+        "sales": 14.5,
         "quote": 78000
       }
     ],
@@ -29,17 +32,24 @@
      
       {
         "month": "Nov",
-        "quote": 73
+        "quote": 95.3,
+        "salesTotal": 6200,
+        "quotaMonth": 6500
       
       },
       {
         "month": "Dec",
-        "quote": 91
+        "quote":100,
+        "salesTotal": 7500,
+        "quotaMonth": 6500
+      
       
       },
       {
         "month": "Jan",
-        "quote": 78
+        "quote": 63.8,
+        "salesTotal": 4150,
+        "quotaMonth": 6500
       
       }
     
@@ -48,32 +58,51 @@
       
       {
         "month": "Aug",
-        "quote": 65
+        "quote": 89.2,
+        "salesTotal": 5800,
+        "quotaMonth": 6500
       
       },
       {
         "month": "Sept",
-        "quote": 78
+        "quote": 87.6,
+        "salesTotal": 5700,
+        "quotaMonth": 6500
       
       },
       {
         "month": "Oct",
-        "quote": 89
+        "quote": 91.5,
+        "salesTotal": 5950,
+        "quotaMonth": 6500
       
       },
       {
         "month": "Nov",
-        "quote": 73
+        "quote": 95.3,
+        "salesTotal": 6200,
+        "quotaMonth": 6500
       
       },
       {
         "month": "Dec",
-        "quote": 91
+        "quote":100,
+        "salesTotal": 7500,
+        "quotaMonth": 6500
       
       },
       {
         "month": "Jan",
-        "quote": 78
+        "quote": 63.8,
+        "salesTotal": 4150,
+        "quotaMonth": 6500
+      
+      },
+      {
+        "month": "Feb",
+        "quote": 80,
+        "salesTotal": 5200,
+        "quotaMonth": 6500
       
       }
     

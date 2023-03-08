@@ -3,7 +3,7 @@ import { View, StyleSheet, Text } from "react-native";
 import { useFonts } from "expo-font";
 import { quotes } from "../../../services/Data.json";
 
-import ContextItem from "../../../contexts/itemContext/ContextItem";
+import ContextItem from "../../../contexts/quotaProvider/QuotaContext";
 import SliderHorizontal from "../components/SliderHorizontal";
 
 const ChartView = ({ children, salesInfo }) => {
