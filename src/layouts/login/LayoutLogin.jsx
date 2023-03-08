@@ -13,7 +13,7 @@ import { useFonts } from "expo-font";
 
 const { width, height } = Dimensions.get("window");
 import LayoutTemplate from "../LayoutTemplate";
-
+console.log(width,height);
 const LayoutLogin = ({ navigation }) => {
   let ScreenHeight = Dimensions.get("window").height;
   let ScreenWidth = Dimensions.get("window").width;

@@ -5,9 +5,9 @@ import LayoutTemplateCharts from "../LayoutTemplateCharts"
 const { width, height } = Dimensions.get("window")
 import ViewTipsRobot from "./components/ViewTipsRobot"
 import { Entypo } from "@expo/vector-icons"
-const LayoutTipsRobot = ({ children }) => {
+const LayoutTipsRobot = ({ children,navigation }) => {
   return (
-    <LayoutTemplateCharts>
+    <LayoutTemplateCharts navigation={navigation}>
       <View style={styles.container}>
       <ViewTipsRobot />
       <View style={styles.iconMessage}>

@@ -3,12 +3,12 @@ import { View, Dimensions,ImageBackground,StyleSheet } from 'react-native'
 
 const { width } = Dimensions.get('window');
 
-const LayoutTemplate = ({children}) => {
+const LayoutTemplate = ({children,navigation}) => {
     
     
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} navigation={navigation}>
         <ImageBackground
         style={styles.ImageBackground}
         source={require("../../assets/images/app_bg.jpg")}

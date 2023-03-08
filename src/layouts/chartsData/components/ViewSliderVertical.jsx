@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   textMonthChart: {
-    fontSize: 12,
+    fontSize: 10,
   },
 })
 

@@ -31,7 +31,7 @@ const LayoutWellcome = ({ navigation }) => {
   }
   return (
     <LayoutTemplate>
-      <LayoutBarTop />
+      <LayoutBarTop navigation={navigation}/>
 
       <View style={container}>
         <View style={containerMessageGlobal}>
