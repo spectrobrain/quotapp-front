@@ -47,33 +47,34 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     height: "15%",
-    marginTop: 10,
+    marginTop: "2.5%",
   },
   viewGraph: {
-    flex: 1,
+    display: "flex",
     justifyContent: "center",
     alignItems: "center",
     marginTop: 0,
     marginLeft: 0,
-    width: "100%",
+    width: "30%",
     height: "70%",
     borderColor: "#fff",
     borderRightWidth: 1,
+   
   },
   imageGraph: {
     marginTop: 0,
     marginLeft: 0,
     width: "60%",
-    height: 45,
+    height: "45%",
   },
   imageGraphChart: {
     marginTop: 0,
     marginLeft: 0,
     width: "48%",
-    height: 45,
+    height: "45%",
   },
   viewGiftLogo: {
-    flex: 1,
+   
     justifyContent: "center",
     alignItems: "center",
     marginTop: 0,
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
     marginTop: 0,
     marginLeft: 10,
     width: "70%",
-    height: 85,            
+    height: "80%",            
   },
 
   shadowSliderView: {
