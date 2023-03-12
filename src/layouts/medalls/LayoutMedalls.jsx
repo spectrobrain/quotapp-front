@@ -7,7 +7,7 @@ const LayoutMedalls= ({navigation}) => {
   const {textTitle,textDescription} = styles;
   return (
     
-   <LayoutTemplateCharts navigation={navigation}>
+   <LayoutTemplateCharts navigation={navigation} iconName = "close-outline" navigateTo="LayoutCharts">
     <Text style={textTitle}>Monthly Quote</Text>
     <Text style={textDescription}>Get medalls and trophies by metting the objectives of each month.</Text>
      <MedallsView/>

@@ -1,16 +1,20 @@
-import React from "react"
+import React,{ useState, useEffect } from "react"
 import { LinearGradient } from "expo-linear-gradient"
 import { View, StyleSheet } from "react-native"
 import { lasttreemonths } from "../../../services/Data.json"
 
-const SliderVertical = ({ quote }) => {
+const SliderVertical = ({ prom }) => {
   const { sliderView, shadowSliderView, sliderProgress } = styles
-
+  const [colorsQuota, setColorsQuota] = useState(["#51e7fb", "#0185f2"])
+ console.log(prom)
+  useEffect(() => {
+    prom >= 100 && setColorsQuota(["#90E94B", "#5D9037"])
+  }, []) 
   return (
     <View style={[sliderView, shadowSliderView]}>
       <LinearGradient
-        style={{ ...sliderProgress, height: `${quote}%` }}
-        colors={["#51e7fb", "#0185f2"]}
+        style={{ ...sliderProgress, height:  prom === 100 ? "98%" : `${prom}%` }}
+        colors={[colorsQuota[0], colorsQuota[1]]}
         end={{ x: 1, y: 1.2 }}
         start={{ x: 1, y: 0.1 }}
         locations={[0.1, 0.9]}

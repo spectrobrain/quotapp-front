@@ -1,39 +1,32 @@
-import * as React from 'react';
-import { StyleSheet, Text ,Dimensions} from 'react-native';
+import * as React from "react"
+import { StyleSheet, Text, Dimensions } from "react-native"
 
-import LayoutTemplateCharts from '../LayoutTemplateCharts';
-import ChartViewMonth from './components/ChartViewMonth';
-import {useMonthlyQuota} from '../../hooks/useMonthyQuota'
-const { width, height } = Dimensions.get("window");
+import LayoutTemplateCharts from "../LayoutTemplateCharts"
+import ChartViewMonth from "./components/ChartViewMonth"
+import { useMonthlyQuota } from "../../hooks/useMonthyQuota"
+const { width, height } = Dimensions.get("window")
 
-const LayoutGraphLastMonths= ({navigation}) => {
-  const {
-    textTitle,
-    
-  } = styles
-  const {averange} = useMonthlyQuota()
-  console.log(typeof averange)
+const LayoutGraphLastMonths = ({ navigation }) => {
+  const { textTitle } = styles
+  const { averange } = useMonthlyQuota()
+
   return (
-
-    <LayoutTemplateCharts navigation={navigation}>
+    <LayoutTemplateCharts
+      navigation={navigation}
+      iconName="close-outline"
+      navigateTo="LayoutCharts"
+    >
       <Text style={textTitle}>Monthly Quote</Text>
-      <Text style={styles.textDescription}>You have met an average of {averange}% of the objetive
-         sales quota, visit AI chat to receive advice on how to increase your results</Text>
-      <ChartViewMonth/>
-        
-      
+      <Text style={styles.textDescription}>
+        You have met an average of {averange}% of the objetive sales quota,
+        visit AI chat to receive advice on how to increase your results
+      </Text>
+      <ChartViewMonth />
     </LayoutTemplateCharts>
-    
-    
-    
-    
-      
-   
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-   
   container: {
     justifyContent: "center",
     width: width,
@@ -45,23 +38,22 @@ const styles = StyleSheet.create({
     height: "11%",
   },
   textTitle: {
-    display:'flex',
-    width: '90%',
-    height:'7%',
-    marginTop: '9%',
-    alignItems: 'flex-start',
-    alignContent:'flex-start',
-    color:'#51e7fb',
+    display: "flex",
+    width: "90%",
+    height: "7%",
+    marginTop: "9%",
+    alignItems: "flex-start",
+    alignContent: "flex-start",
+    color: "#51e7fb",
     fontSize: 20,
-    
   },
-  textDescription:{
-    marginTop:'5%',
-    marginBottom:'8%',
-    fontSize:14,
-    color:'white',
-    width:'90%'
-  }
-}); 
+  textDescription: {
+    marginTop: "5%",
+    marginBottom: "8%",
+    fontSize: 14,
+    color: "white",
+    width: "90%",
+  },
+})
 
-export default LayoutGraphLastMonths;
+export default LayoutGraphLastMonths
