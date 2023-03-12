@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import ChartViewMedalls from './components/MedallsView';
 import LayoutTemplateCharts from '../LayoutTemplateCharts';
 import MedallsView from './components/MedallsView'
 

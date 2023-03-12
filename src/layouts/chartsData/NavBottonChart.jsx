@@ -77,14 +77,13 @@ const styles = StyleSheet.create({
    
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 0,
-    marginLeft: 0,
+    
     width: "33.33%",
     height: "100%",
   },
   imageGifRobot: {
-    marginTop: 0,
-    marginLeft: 10,
+   
+    marginLeft: "9.5%",
     width: "70%",
     height: "80%",            
   },

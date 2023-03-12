@@ -1,12 +1,15 @@
-import React,{useState} from "react";
+import React,{useContext, useState} from "react";
 import { View, StyleSheet, Text } from "react-native";
 import ViewSliderVertical from "./ViewSliderVertical";
+import QuotaContext from '../../../contexts/quotaProvider/QuotaContext'
 import { useFonts } from "expo-font";
 // import { useDataSeller } from "../../../hooks/useDataSeller";
  import { lasttreemonths } from "../../../services/Data.json";
 
 const YearChartView = (salesMonths) => {
- 
+    const quotaContext = useContext(QuotaContext)
+    const {quotasData,quotas}= quotaContext;
+    console.log(quotas)
     const [dataSales,setDataSales] = useState(lasttreemonths)
     
   const {
