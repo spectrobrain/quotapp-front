@@ -1,26 +1,16 @@
 import React from "react"
-import {
-  StyleSheet,
-  Text,
-  View,
-  Pressable,
-  Image,
-  Dimensions,
-} from "react-native"
+import { StyleSheet, View, Pressable, Dimensions } from "react-native"
 import LayoutTemplate from "../LayoutTemplate"
 import * as Amigatable from "react-native-animatable"
-import { Entypo, AntDesign } from "@expo/vector-icons"
-
+import { Entypo,AntDesign } from "@expo/vector-icons"
 import LayoutBarTop from "../LayoutBarTop"
+import WellcomeMessage from "./components/WellcomeMessage"
 const { width, height } = Dimensions.get("window")
 
 const LayoutWellcome = ({ navigation }) => {
   const {
-    containerMessageGlobal,
-    containerMessage,
-    textMessage,
-    containerGift,
     containerIcon,
+    containerGift,
     giftRobot,
     iconChevron,
     container,
@@ -31,21 +21,13 @@ const LayoutWellcome = ({ navigation }) => {
   }
   return (
     <LayoutTemplate>
-      <LayoutBarTop navigation={navigation}/>
+      <LayoutBarTop navigation={navigation} />
 
       <View style={container}>
-        <View style={containerMessageGlobal}>
-          <View style={containerMessage}>
-            <Text style={textMessage}>
-              Hello, wellcome, I am your sales assistant, I am here to motivate
-              you and help you achieve your goals !
-            </Text>
-          </View>
-          <Pressable style={containerIcon}
-          >
+        <WellcomeMessage />
+        <Pressable style={containerIcon}>
             <AntDesign name="caretdown" size={80} color="white" />
           </Pressable>
-        </View>
         {/* animacion del robot  */}
         <View style={containerGift}>
           <Amigatable.Image
@@ -79,31 +61,17 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     width: "100%",
     height: "100%",
-   
   },
-
-  containerMessageGlobal: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "flex-start",
-    flexWrap: "wrap",
-    flexDirection: "row",
-
-    height: "auto",
-  },
-  containerMessage: {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    borderRadius: 10,
-    backgroundColor: "#fff",
-    width: "63%",
-    height: "auto",
-    marginTop: "10%",
-    marginLeft: "10%",
-    marginRight: "10%",
-    alignItems: "center",
+  containerIcon: {
+    width:width,
+    displey: "flex",
+    flexDirection: "column",
     justifyContent: "flex-start",
+    alignItems: "center",
+    marginTop: -(height *0.0411),
+    zIndex: 1,
+    height: height * 0.109,
+   
   },
   containerGift: {
     display: "flex",
@@ -118,37 +86,12 @@ const styles = StyleSheet.create({
     width: "66%",
     height: "100%",
     resizeMode: "contain",
-    marginVertical:height * 0.0568
+    marginVertical: height * 0.0568,
   },
-  containerIcon: {
-    displey: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
-    marginTop: -29,
-    zIndex: 1,
-    height: 75,
-  },
-  logoMtq: {
-    marginLeft: 15,
-    marginTop: 30,
-    width: 85,
-    height: 30,
-  },
-
-  textMessage: {
-    marginTop: "10%",
-    marginLeft: "10%",
-    marginRight: "10%",
-    marginBottom: "30%",
-    textAlign: "justify",
-    fontSize: 12,
-  },
-  iconChevron: {},
   iconMesaggeCaret: {
     flexDirection: "row",
     width: width,
-    height: 65,
+    height: height * 0.0923,
   },
 })
 
