@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext,useEffect} from "react";
 import {
   StyleSheet,
   Text,
@@ -7,6 +7,7 @@ import {
   Pressable,
   Dimensions,
 } from "react-native";
+import QuotaContext from "../../contexts/quotaProvider/QuotaContext";
 import LayoutBannerLogin from "./LayoutBannerLogin";
 import { user } from "../../services/Data.json";
 import { useFonts } from "expo-font";
@@ -15,12 +16,13 @@ const { width, height } = Dimensions.get("window");
 import LayoutTemplate from "../LayoutTemplate";
 console.log(width,height);
 const LayoutLogin = ({ navigation }) => {
-  let ScreenHeight = Dimensions.get("window").height;
-  let ScreenWidth = Dimensions.get("window").width;
-
+  
 
   // const { email, password } = user;
   // console.log(email, user);
+    //  useEffect(() => {
+    //   getData()
+    //  }, [])
                                 
   const [passwordUser, setPasswordUser] = useState();
   const [emailUser,setEmailUser]= useState();

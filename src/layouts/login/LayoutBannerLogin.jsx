@@ -14,10 +14,11 @@ const LayoutBannerLogin = () => {
   // if (!fontsLoaded) {
   //   return null;
   // }
-
+  const {imageBanner} = scaledStyles
+  const heigthCalculate = height * 0.426;
   return (
    
-    <ImageBackground style={scaledStyles.imageBanner}
+    <ImageBackground style={{...imageBanner,height:heigthCalculate}}
         source={require("../../../assets/images/login_bg_ok.png")}>
           {/* <View  style={scaledStyles.logoContainer}> */}
                 <Image
@@ -48,7 +49,7 @@ const scaledStyles = ScaledSheet.create({
     display: 'flex',
     flexDirection: 'column',
     width: width,
-    height: 300,
+    height:height * 0.426,
     alignItems: 'center',
     justifyContent: 'space-evenly',
     
@@ -84,9 +85,8 @@ const styles = StyleSheet.create({
        
         
       },
-      imageText: {
-       
-        fontSize: 30,
+      imageText: {    
+        fontSize:height *0.0426 ,
         color: '#1592b9',
         fontWeight: 'bold',
         textAlign: 'center',

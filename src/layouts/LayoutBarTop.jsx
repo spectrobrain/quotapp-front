@@ -15,9 +15,12 @@ const { width, height } = Dimensions.get("window");
 import { useFonts } from "expo-font";
 
 const LayoutBarTop = ({navigation}) => {
+  const heightCalculate = height * 0.1136
+  console.log(heightCalculate)
+  const {imageBanner}= scaledStyles
   return (
     <ImageBackground
-      style={scaledStyles.imageBanner}
+      style={{...imageBanner,height:heightCalculate}}
       source={require("../../assets/images/header_bg_ok.png")}
     >
       <Image
@@ -39,7 +42,7 @@ export default LayoutBarTop;
 
 const scaledStyles = ScaledSheet.create({
   container: {
-    flex: 1,
+    backgroundColor:'yellow',
     width: width,
     height: "12%",
     justifyContent: "center",
@@ -51,7 +54,7 @@ const scaledStyles = ScaledSheet.create({
     display: "flex",
     flexDirection: "row",
     width: width,
-    height: 80,
+    heigth:height * 0.1136,
     alignItems: "flex-start",
   },
   imageLogo: {
