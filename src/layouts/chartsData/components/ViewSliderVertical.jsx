@@ -1,24 +1,26 @@
+import React from "react"
 import { View, Text, StyleSheet } from "react-native"
 import SliderVertical from "./SliderVertical"
 import { useFonts } from "expo-font"
-import React from "react"
 
-const ViewSliderVertical = ({ month, quote }) => {
+const ViewSliderVertical = ({ month, prom }) => {
   const {
     textMonthChart,
     chartSlider,
   } = styles
-
+  
   const [fontsLoaded] = useFonts({
     Roboto: require("../../../../assets/fonts/Roboto-Light.ttf"),
   })
 
   //   return null;
   // }
+
+
   return (
     <View style={chartSlider}>
-      <Text style={textMonthChart}>{quote}%</Text>
-      <SliderVertical quote={quote} />
+      <Text style={textMonthChart}>{prom}%</Text>
+      <SliderVertical prom={prom} />
       <Text style={textMonthChart}>{month}</Text>
     </View>
   )

@@ -8,13 +8,13 @@ import {
 } from "react-native";
 import LayoutTemplate from "./LayoutTemplate";
 import { ScaledSheet } from "react-native-size-matters";
-import { Feather } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import * as Amigatable from "react-native-animatable";
 
 const { width, height } = Dimensions.get("window");
 
-const LayoutTemplateCharts = ({ navigation, children }) => {
-  
+const LayoutTemplateCharts = ({ navigation, children,iconName, navigateTo }) => {
+ 
   return (
     <LayoutTemplate navigation={navigation}>
       <View style={styles.containerHeader}>
@@ -24,9 +24,9 @@ const LayoutTemplateCharts = ({ navigation, children }) => {
         ></Image>
         <Pressable
           style={styles.iconXblack}
-          onPress={() => navigation.goBack()}
+          onPress={() => navigation.navigate(`${navigateTo}`)}
         >
-          <Feather style={styles.iconX} name="x" size={34} color="#fff" />
+          <Ionicons style={styles.iconX} name={iconName} size={35} color="#fff" />
         </Pressable>
       </View>
       {children}
@@ -60,10 +60,10 @@ const styles = StyleSheet.create({
   },
   iconXblack: {
     alignItems: "flex-end",
-    paddingRight: "3%",
+    paddingRight: "5%",
     
     width: "76%",
-    height: "40%",
+    height: "50%",
     justifyContent: "center",
   },
 });

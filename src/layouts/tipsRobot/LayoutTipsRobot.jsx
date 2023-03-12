@@ -7,7 +7,7 @@ import ViewTipsRobot from "./components/ViewTipsRobot"
 import { Entypo } from "@expo/vector-icons"
 const LayoutTipsRobot = ({ children,navigation }) => {
   return (
-    <LayoutTemplateCharts navigation={navigation}>
+    <LayoutTemplateCharts navigation={navigation} iconName = "close-outline" navigateTo="LayoutCharts">
       <View style={styles.container}>
       <ViewTipsRobot />
       <View style={styles.iconMessage}>
