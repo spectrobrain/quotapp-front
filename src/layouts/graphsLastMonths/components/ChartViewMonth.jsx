@@ -1,48 +1,52 @@
-import React, { useState, useEffect, useContext } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import React from "react";
+import { View, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
+import {useMonthlyQuota} from '../../../hooks/useMonthyQuota'
+
 import SliderHorizontal from './SliderHorizontal'
-import { quotes } from "../../../services/Data.json";
 
-//import ContextItem from "../../../contexts/itemContext/ContextItem";
-//import SliderHorizontal from "../components/SliderHorizontal";
 
-const ChartView = (                                                                                                                                  ) => {
-//   const dataUser = useContext(ContextItem); //data
-const {
-  textMonthChart,
-  chartSlider,
-} = styles
-  const [fontsLoaded] = useFonts({
-    Roboto: require("../../../../assets/fonts/Roboto-Light.ttf"),
-  });
 
-  //   return null;
+const ChartViewMonth = () => {
+  const generatorKey= Math.floor(Math.random()*100000)
+
+const {yearMonths} = useMonthlyQuota()
+console.log('desde charviewMonth',yearMonths)
+  // const [fontsLoaded] = useFonts({
+  //   Roboto: require("../../../../assets/fonts/Roboto-Light.ttf"),
+  // });
+    //   return null;
   // }
 
-  const [item] = quotes;
+   const yearMonthMap = yearMonths?.map((item) => console.log(item.salesTotal))
+  
+  return (
+    <View style={styles.chartView}>
+     
+      { yearMonths ? yearMonths?.map((item,index)=> <SliderHorizontal key={`${index}-${generatorKey}`} month={item.month} salesTotal={item.salesTotal} quota={item.quotaMonth} prom={item.prom}  />): null }  
+  </View>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+  
 
   //const { sliderProgress } = styles;
   
 
-  return (
-    <View style={styles.chartView}>
-    
-      
-      <SliderHorizontal/>
-      <SliderHorizontal/>
-      <SliderHorizontal/>
-      <SliderHorizontal/>
-      <SliderHorizontal/>
-      <SliderHorizontal/>
-      
-     
-      
-    </View>
-  );
-};
+ 
 
-const styles = StyleSheet.create({
+
+  const styles = StyleSheet.create({
   chartView: {
     flexDirection: "column",
     alignItems: "center",
@@ -72,8 +76,10 @@ const styles = StyleSheet.create({
     shadowOpacity:1,
     shadowRadius: 5,
     elevation:15,
-      
+    
   },
 });
 
-export default ChartView;
+
+
+export default ChartViewMonth;

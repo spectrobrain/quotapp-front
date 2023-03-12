@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     width: "66%",
     height: "100%",
     resizeMode: "contain",
-    marginVertical: 40,
+    marginVertical:height * 0.0568
   },
   containerIcon: {
     displey: "flex",

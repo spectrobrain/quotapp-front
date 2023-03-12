@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { useFonts } from "expo-font";
 import { quotes } from "../../../services/Data.json";
 
-import ContextItem from "../../../contexts/quotaProvider/QuotaContext";
+
 import SliderHorizontal from "../components/SliderHorizontal";
 
 const ChartView = ({ children, salesInfo }) => {
@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 20,
+    paddingRight:20,
+    paddingLeft:20
   },
   leftText: {
     flex: 1,

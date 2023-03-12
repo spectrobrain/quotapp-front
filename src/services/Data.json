@@ -54,7 +54,45 @@
       }
     
     ],
-    "lastsixmonths" : [
+    "yearbymonths" : [
+     
+      {
+        "month": "Mar",
+        "quote":100,
+        "salesTotal": 7500,
+        "quotaMonth": 6500
+      
+      
+      },
+      {
+        "month": "Apr",
+        "quote": 63.8,
+        "salesTotal": 4150,
+        "quotaMonth": 6500
+      
+      },
+      {
+        "month": "May",
+        "quote": 95.3,
+        "salesTotal": 6200,
+        "quotaMonth": 6500
+      
+      },
+      {
+        "month": "Jun",
+        "quote":100,
+        "salesTotal": 7500,
+        "quotaMonth": 6500
+      
+      
+      },
+      {
+        "month": "Jul",
+        "quote": 63.8,
+        "salesTotal": 4150,
+        "quotaMonth": 6500
+      
+      },
       
       {
         "month": "Aug",
@@ -64,7 +102,7 @@
       
       },
       {
-        "month": "Sept",
+        "month": "Sep",
         "quote": 87.6,
         "salesTotal": 5700,
         "quotaMonth": 6500

@@ -1,13 +1,18 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
+import React,{ useState } from 'react'
 
-const CardMedall = () => {
+
+
+const CardMedall = ({prom}) => {
     const {cardView,imageMedall} = styles;
+    const [routeImageGold,setRouteImage] = useState(require('../../../../assets/images/medal1.png'))
+    const [routeImageSilver,setRouteImageSilver] = useState(require('../../../../assets/images/medal2.png'))
+    
   return (
     <View style={cardView}>
       <Image
           style={imageMedall}
-          source={require("../../../../assets/images/medal1.png")}
+          source={prom >= 100 ? routeImageGold :routeImageSilver }
         />
     </View>
   )

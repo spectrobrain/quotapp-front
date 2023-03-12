@@ -1,33 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 //import  {quotes}  from "../../../services/Data.json";
 
 import {   StyleSheet,View,Text} from "react-native";
 
 
-const SliderHorizontal = () => {
-  
+const SliderHorizontal = ({month,salesTotal,quota,prom}) => {
+ //console.log('prom desde slider',prom,salesTotal,quota,month)
   const { sliderProgress,
           sliderView,
           shadowSliderView,
           textMonthChart,
           textMonthquote,
           sliderViewContainer}= styles
+        const [colorsQuota,setColorsQuota]=useState(["#51e7fb", "#0185f2"])
+        useEffect(() => {
+          
+          
+          prom >= 100 && setColorsQuota(['#90E94B','#5D9037']) ;
+          
+         }, [])// `${prom}%`
+         console.log(prom === 100)
   return (
-    <View style={sliderViewContainer}>
+    <View  style={sliderViewContainer}>
     <View style={[   sliderView,shadowSliderView]}>
       
         <LinearGradient
-        style={{...sliderProgress,width:'67%'}} //destructuracion para hacer dinaico el slider
+        style={{...sliderProgress,width:prom === 100 ?  '98%' : `${prom}%`}} //destructuracion para hacer dinaico el slider
           
-          colors={["#51e7fb", "#0185f2"]}
+          colors={[colorsQuota[0],colorsQuota[1]]}
           end={{ x: 1, y: 1.2 }}
           start={{ x: 1, y: 0.1 }}
           locations={[0.1, 0.9]}
         />
         
       </View>  
-      <Text style={textMonthChart}>JAN-<Text style={textMonthquote}>6.000</Text>/12.000</Text>
+      <Text style={textMonthChart}>{month}-<Text style={textMonthquote}> $ {salesTotal} </Text>/$ {quota}</Text>
       </View>
       //#1ca9f2
       
