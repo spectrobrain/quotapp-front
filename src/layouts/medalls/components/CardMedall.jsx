@@ -1,7 +1,5 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, View, Image } from 'react-native'
 import React,{ useState } from 'react'
-
-
 
 const CardMedall = ({prom}) => {
     const {cardView,imageMedall} = styles;
@@ -34,9 +32,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderColor : "#51e7fb",
     borderWidth: 1
-
-   
-    
     },
     imageMedall: {
       width: "99%",

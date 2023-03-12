@@ -19,7 +19,7 @@ const LayoutCharts = ({ navigation }) => {
   
   //const [salesMonths,setSalesMonths] = useState(lasttreemonths)
   return (
-    <LayoutTemplateCharts navigation={navigation}>
+    <LayoutTemplateCharts navigation={navigation} iconName = "log-out-outline" navigateTo="Login">
       { salesUser ? salesUser?.map((sale)=><ChartView key={sale.id} salesInfo={sale}/>): null }
        <ChartViewVertical  />
      <NavBottonChart navigation={navigation}/> 

@@ -1,15 +1,17 @@
-import React,{useContext, useState} from "react";
+import React,{ useState} from "react";
 import { View, StyleSheet, Text } from "react-native";
 import ViewSliderVertical from "./ViewSliderVertical";
-import QuotaContext from '../../../contexts/quotaProvider/QuotaContext'
+
 import { useFonts } from "expo-font";
 // import { useDataSeller } from "../../../hooks/useDataSeller";
+import { useLayoutCharts } from "../../../hooks/useLayoutCharts";
  import { lasttreemonths } from "../../../services/Data.json";
 
 const YearChartView = (salesMonths) => {
-    const quotaContext = useContext(QuotaContext)
-    const {quotasData,quotas}= quotaContext;
-    console.log(quotas)
+  const { treeMonths } = useLayoutCharts()
+  const generatorKey = Math.floor(Math.random() * 100000)
+  console.log(treeMonths)
+    
     const [dataSales,setDataSales] = useState(lasttreemonths)
     
   const {
@@ -37,7 +39,7 @@ const YearChartView = (salesMonths) => {
         <Text style={textAcomplishment}>80.6% Average Acomplishment</Text>
       </View>
       <View style={chartSlideMonths}>
-      { dataSales ? lasttreemonths?.map((months,index)=><ViewSliderVertical key={`${months?.quote}-${index}`} month={months.month} quote={months.quote} />): null }
+      { treeMonths ? treeMonths?.map((months,index)=><ViewSliderVertical key={`${index}-${generatorKey}`} month={months.month} prom={months.prom} />): null }
       </View>
     </View>
   );
