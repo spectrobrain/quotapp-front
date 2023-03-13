@@ -1,10 +1,11 @@
-import React from "react"
+import React,{ useEffect, useState } from "react"
 import { StyleSheet, View, Pressable, Dimensions } from "react-native"
 import LayoutTemplate from "../LayoutTemplate"
 import * as Amigatable from "react-native-animatable"
 import { Entypo,AntDesign } from "@expo/vector-icons"
 import LayoutBarTop from "../LayoutBarTop"
 import WellcomeMessage from "./components/WellcomeMessage"
+import { messages } from '../../services/messages'
 const { width, height } = Dimensions.get("window")
 
 const LayoutWellcome = ({ navigation }) => {
@@ -16,15 +17,27 @@ const LayoutWellcome = ({ navigation }) => {
     container,
   } = styles
 
+  const [messagesWellcome,setMessagesWellcome] =useState(messages.message1)
+  const [messageId,setMessageId] = useState(0)
+  const [routeLayout,setRouteLayout] = useState()
+ 
+  useEffect(() => {
+    messageId === 1 && setMessagesWellcome(messages.message2);
+    messageId === 2 && setMessagesWellcome(messages.message3);
+    messageId === 2 && setRouteLayout("LayoutCharts");
+  }, [messageId])
+  
   const handleIconCaretChevron = () => {
-    navigation.navigate("LayoutCharts")
-  }
+    setMessageId(messageId+1)
+  routeLayout ? navigation.navigate("LayoutCharts") : null ;  
+}
+
   return (
     <LayoutTemplate>
       <LayoutBarTop navigation={navigation} />
 
       <View style={container}>
-        <WellcomeMessage />
+        <WellcomeMessage message= {messagesWellcome}/>
         <Pressable style={containerIcon}>
             <AntDesign name="caretdown" size={80} color="white" />
           </Pressable>

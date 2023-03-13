@@ -3,8 +3,6 @@ import { useState, useContext, useEffect } from "react"
 import QuotaContext from "../contexts/quotaProvider/QuotaContext"
 
 export const useLayoutCharts = () => {
-  const generatorKey = Math.floor(Math.random() * 100000)
-  console.log("generator", generatorKey)
   const { quotasYear } = useContext(QuotaContext)
 
   const [yearMonths, setYearMonths] = useState()

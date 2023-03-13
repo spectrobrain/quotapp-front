@@ -6,7 +6,6 @@ import { lasttreemonths } from "../../../services/Data.json"
 const SliderVertical = ({ prom }) => {
   const { sliderView, shadowSliderView, sliderProgress } = styles
   const [colorsQuota, setColorsQuota] = useState(["#51e7fb", "#0185f2"])
- console.log(prom)
   useEffect(() => {
     prom >= 100 && setColorsQuota(["#90E94B", "#5D9037"])
   }, []) 

@@ -10,7 +10,7 @@ import { useLayoutCharts } from "../../../hooks/useLayoutCharts";
 const YearChartView = (salesMonths) => {
   const { treeMonths } = useLayoutCharts()
   const generatorKey = Math.floor(Math.random() * 100000)
-  console.log(treeMonths)
+  
     
     const [dataSales,setDataSales] = useState(lasttreemonths)
     
