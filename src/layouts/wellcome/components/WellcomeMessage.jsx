@@ -1,23 +1,21 @@
 import React from 'react'
-import { View, Text, Pressable,StyleSheet } from 'react-native'
-import { AntDesign } from "@expo/vector-icons"
+import { View, Text, StyleSheet } from 'react-native'
 
-const WellcomeMessage = () => {
 
+
+const WellcomeMessage = ({message}) => {
+ 
     const {
         containerMessageGlobal,
         containerMessage,
-        textMessage,
-        containerIcon,
-        container,
+        textMessage
       } = styles
   return (
     
         <View style={containerMessageGlobal}>
           <View style={containerMessage}>
             <Text style={textMessage}>
-              Hello, wellcome, I am your sales assistant, I am here to motivate
-              you and help you achieve your goals !
+              {message}
             </Text>
           </View>
          

@@ -14,7 +14,6 @@ import { useFonts } from "expo-font";
 
 const { width, height } = Dimensions.get("window");
 import LayoutTemplate from "../LayoutTemplate";
-console.log(width,height);
 const LayoutLogin = ({ navigation }) => {
   
 

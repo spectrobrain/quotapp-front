@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import {
   View,
@@ -8,19 +8,18 @@ import {
   ImageBackground,
   Dimensions,
   Pressable,
-} from "react-native";
-import { ScaledSheet } from "react-native-size-matters";
-import { Feather } from "@expo/vector-icons";
-const { width, height } = Dimensions.get("window");
-import { useFonts } from "expo-font";
+} from "react-native"
+import { ScaledSheet } from "react-native-size-matters"
+import { Feather } from "@expo/vector-icons"
+const { width, height } = Dimensions.get("window")
+import { useFonts } from "expo-font"
 
-const LayoutBarTop = ({navigation}) => {
+const LayoutBarTop = ({ navigation }) => {
   const heightCalculate = height * 0.1136
-  console.log(heightCalculate)
-  const {imageBanner}= scaledStyles
+  const { imageBanner } = scaledStyles
   return (
     <ImageBackground
-      style={{...imageBanner,height:heightCalculate}}
+      style={{ ...imageBanner, height: heightCalculate }}
       source={require("../../assets/images/header_bg_ok.png")}
     >
       <Image
@@ -35,14 +34,14 @@ const LayoutBarTop = ({navigation}) => {
         <Feather style={scaledStyles.iconX} name="x" size={34} color="black" />
       </Pressable>
     </ImageBackground>
-  );
-};
+  )
+}
 
-export default LayoutBarTop;
+export default LayoutBarTop
 
 const scaledStyles = ScaledSheet.create({
   container: {
-    backgroundColor:'yellow',
+    backgroundColor: "yellow",
     width: width,
     height: "12%",
     justifyContent: "center",
@@ -54,7 +53,7 @@ const scaledStyles = ScaledSheet.create({
     display: "flex",
     flexDirection: "row",
     width: width,
-    heigth:height * 0.1136,
+    heigth: height * 0.1136,
     alignItems: "flex-start",
   },
   imageLogo: {
@@ -70,4 +69,4 @@ const scaledStyles = ScaledSheet.create({
     height: "40%",
     justifyContent: "flex-end",
   },
-});
+})
