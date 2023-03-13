@@ -3,7 +3,7 @@ export const getDataService  = async() => {
       const res =await fetch('https://my-json-server.typicode.com/luisforerop/type-of-positions/db')
       //const res =await fetch('./Data.json');
       const data = await res.json(res)
-      console.log('desde service',data)
+     
       return data;
     } catch (error) {
       
